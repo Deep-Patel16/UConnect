@@ -1,6 +1,6 @@
 <?php
 
-	echo("Testing")
-	echo("New test")
+	echo("Testing");
+	echo("New test");
 
 ?>
