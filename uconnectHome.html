@@ -10,7 +10,7 @@
 	border: 0.1em solid black;
 	height: 5em;
 	font-size: 4em;
-}	
+}
 .leftbox {
 	float: left;
 	background-color: #7e408c;
@@ -27,10 +27,20 @@
 	height: 25em;
 	line-height: 8em;
 }
-</style>	
+.verticalhorizontal {
+    display: table-cell;
+    height: 100;
+    text-align: center;
+    width: 100;
+    vertical-align: middle;
+}
+</style>
 </head>
 <body>
 	<header>
+		<div class="verticalhorizontal">
+			<img src="./images/logo.png" alt="Logo" align="middle">
+		</div>
 		<h1 style="line-height: 2em; text-align: center;">UConnect</h1>
 	</header>
 	<main>
@@ -38,13 +48,13 @@
 			<a href="myProfile.html" title="View profile" class="box">My Profile</a>
 			<br>
 			<a href="" title="Find friends" class="box">My Friends</a>
-			
+
 		</aside>
 		<br>
 		<aside class="rightbox">
 			<a href="" title="View notifications" class="box">My Notifications</a>
 			<br>
-			<a href="" title="View settings" class="box">My Settings</a>	
+			<a href="" title="View settings" class="box">My Settings</a>
 		</aside>
 	</main>
 </body>
