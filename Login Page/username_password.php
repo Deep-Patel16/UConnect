@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Details</title>
+</head>
+<body>
+
+
+
+
+
+
 <?php
 
 require_once('../config.inc.php');
@@ -25,3 +38,7 @@ if($mysqli->query($sql) === TRUE) {
 $mysqli->close();
 
 ?>
+
+
+</body>
+</html>
