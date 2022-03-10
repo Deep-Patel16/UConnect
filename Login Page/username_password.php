@@ -22,10 +22,6 @@ if($mysqli -> connect_error) {
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 }
 
-$name = $_GET['username'];
-$email = $_GET['email'];
-$password = $_GET['password'];
-
 $sql = "INSERT INTO Users (username, password, id)
         VALUES ('SteveJobs', 'pass123', 'stevejobs@mircosoft.com')";
 
