@@ -25,11 +25,7 @@ $stmt = $mysqli->prepare("INSERT INTO Users (username, password, id) VALUES (?,?
 $stmt->bind_param("sss", $name, $password, $email);
 $stmt->execute();
 
-if($mysqli->query($stmt) === TRUE) {
-  echo ("Record added successfully");
-} else {
-  echo ("Record failed to add");
-}
+
 
 $mysqli->close();
 
