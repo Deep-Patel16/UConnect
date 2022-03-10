@@ -9,7 +9,7 @@ if($mysqli -> connect_error) {
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 }
 
-$sql = "INSERT INTO user_data (username, password, id)
+$sql = "INSERT INTO Users (username, password, id)
         VALUES ('SteveJobs', 'pass', 111)";
 
 if($mysqli->query($sql) === TRUE) {
