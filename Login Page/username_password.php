@@ -21,10 +21,11 @@ $name = $_GET['username'];
 $email = $_GET['email'];
 $password = $_GET['password'];
 
-$sql = "INSERT INTO Users (username, password, id)
-        VALUES ($name, $password, $email)";
+$stmt = $mysqli->prepare("INSERT INTO Users (username, password, id) VALUES (?,?,?)");
+$stmt->bind_param("sss", $name, $password, $email);
+$stmt->execute();
 
-if($mysqli->query($sql) === TRUE) {
+if($mysqli->query($stmt) === TRUE) {
   echo ("Record added successfully");
 } else {
   echo ("Record failed to add");
