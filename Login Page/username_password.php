@@ -27,7 +27,7 @@ $email = $_GET['email'];
 $password = $_GET['password'];
 
 $sql = "INSERT INTO Users (username, password, id)
-        VALUES ($name, $password, $email)";
+        VALUES ('SteveJobs', 'pass123', 'stevejobs@mircosoft.com')";
 
 if($mysqli->query($sql) === TRUE) {
   echo ("Record added successfully");
