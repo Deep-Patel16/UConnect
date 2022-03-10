@@ -9,8 +9,12 @@ if($mysqli -> connect_error) {
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 }
 
+$name = $_GET['name'];
+$email = $_GET['email'];
+$password = $_GET['password'];
+
 $sql = "INSERT INTO Users (username, password, id)
-        VALUES ('SteveJobs', 'pass', 111)";
+        VALUES ($name, $password, $email)";
 
 if($mysqli->query($sql) === TRUE) {
   echo ("Record added successfully");
