@@ -48,32 +48,65 @@
 }
 
 </style>
-<head>
+<link href="styles.css" rel="stylesheet">
+<script defer src="script.js"></script>
+</head>
 <body>
 <img class="logo" src="logo.png" alt="Logo of website">
 <nav class="navbar navbar-expand-lg fixed-bottom navbar-light bg-light">
-    <div class="container-fluid">
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" \>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Report</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Privacy </a>
-          </li>
-        </ul>
-      </div>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" \>
+        <li class="nav-item">
+					<button class="popup-button" href="#myPopup1">About</button>
+					<div id="myPopup1" class="popup">
+					  <div class="popup-content">
+					    <div class="popup-header">
+					      <span class="close-button">×</span>
+					      <h2>About</h2>
+					    </div>
+					    <div class="popup-body">
+					      About information
+					    </div>
+					  </div>
+					</div>
+			  </li>
+        <li class="nav-item">
+					<button class="popup-button" href="#myPopup2">Terms and Conditions</button>
+					<div id="myPopup2" class="popup">
+					  <div class="popup-content">
+					    <div class="popup-header">
+					      <span class="close-button">×</span>
+					      <h2>Terms and Conditions</h2>
+					    </div>
+					    <div class="popup-body">
+					      Terms and conditions information
+					    </div>
+					  </div>
+					</div>
+        </li>
+        <li class="nav-item">
+					<button class="popup-button" href="#myPopup3">Privacy</button>
+					<div id="myPopup3" class="popup">
+					  <div class="popup-content">
+					    <div class="popup-header">
+					      <span class="close-button">×</span>
+					      <h2>Privacy</h2>
+					    </div>
+					    <div class="popup-body">
+					      Privacy information
+					    </div>
+					  </div>
+					</div>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-<
   <!--Buttons-->
   <div class="d-flex justify-content-center">
     <!--Button for sign up-->
