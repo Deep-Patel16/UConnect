@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Friends</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        background: rebeccapurple;
+
+      }
+      main {
+        margin-left: 300px;
+        padding: 20px;
+        text-align: center;
+      }
+
+
+      .navbutton{
+        box-sizing: border-box;
+        height: 100px;
+        width:300px;
+        font-size: 25px;
+        border: 2px solid #ca80e9;
+        padding: 15px 32px;
+        background-color: #dfb3f2
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <button type="button" class="navbutton" disabled>Friends</button>
+        <button type="button" class="navbutton">Deep</button>
+        <button type="button" class="navbutton">Usman</button>
+        <button type="button" class="navbutton">Taran</button>
+        <button type="button" class="navbutton">Charlie</button>
+        <button type="button" class="navbutton">Ryan</button>
+        <button type="button" class="navbutton">Hrishit</button>
+
+    </nav>
+    <main>
+      <h1>Friend</h1>
+      <form action="????????">
+
+        <img src="./images/kanye.png" alt="profile pic" style="height: 300px; width:300px"><br><br>
+
+        <input placeholder="First name" type="text" id="fname" name="fname" style="height: 50px; width: 500px; font-size:30px; display: table-column;"><br><br>
+
+
+        <input placeholder="Last name"type="text" id="lname" name="lname"style="height: 50px; width: 500px; font-size:30px;display: table-column;"><br><br>
+
+        <input placeholder="Age" type="number" id="age" name="age"style="height: 50px; width: 500px; font-size:30px;display: table-column;"><br><br>
+
+        <input placeholder="Course" type="text" id="course" name="course"style="height: 50px; width: 500px; font-size:30px;display: table-column;"><br><br>
+
+        <textarea name="abtme" rows="8" cols="80" placeholder="About Me:" type="text" id="abtme"  maxlength="200"style="height: 200px; width: 500px;display: table-column;"></textarea><br><br>
+
+        <input type="submit" value="Add">
+        <input type="submit" value="Skip">
+
+        </form>
+    </main>
+  </body>
+</html>
