@@ -7,7 +7,7 @@ session_start();
 
 	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	$mysqli = new mysqli($database_host, $database_user, $database_pass, $group_dbnames[0]);
-
+	$_SESSION['sqli'] = $mysqli;
 	if($mysqli -> connect_error) {
     	die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 	}
