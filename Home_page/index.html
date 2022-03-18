@@ -15,7 +15,7 @@ session_start();
 <body>
 <!-- partial:index.partial.html -->
 <?php
-  $stmt = $mysqli->prepare("SELECT name FROM Users WHERE id=?");
+  $stmt = $mysqli->prepare("SELECT username FROM Users WHERE id=?");
   $stmt->bind_param('s', $_SESSION['id']);
   $stmt->execute();
   $stmt->bind_result($value);
