@@ -14,7 +14,9 @@
 
 	$stmt = $mysqli->prepare("SELECT password FROM Users WHERE id=?");
 	$stmt->bind_param('s', $id);
-	$value = $stmt->execute();
+	$stmt->execute();
+	$stmt->bind_result($value);
+	$stmt->fetch();
 
 	echo($value);
 
