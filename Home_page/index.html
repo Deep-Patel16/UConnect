@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -7,11 +10,15 @@
 <link rel='stylesheet' href='https://codepen.io/P1N2O/pen/xxbjYqx.css'><link rel="stylesheet" href="./style.css">
 
 </head>
+Logged in as
+<?php
+echo($_SESSION['id']);
+?>
 <body>
 <!-- partial:index.partial.html -->
 
 <div class="puzzles">
-    
+
   <div class="jigsaw1 grid">
       <span class="t"></span>
       <span class="r"></span>
@@ -32,7 +39,7 @@
       <span class="b"></span>
       <span class="l"></span>
       <span class="text">Friends</span>
-  </div> 
+  </div>
   <div class="jigsaw4 grid">
       <span class="t"></span>
       <span class="r"></span>
