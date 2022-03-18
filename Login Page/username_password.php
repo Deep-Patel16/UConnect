@@ -22,7 +22,7 @@ $email = $_GET['email'];
 $password = $_GET['password'];
 
 $stmt = $mysqli->prepare("INSERT INTO Users (username, password, id) VALUES (?,?,?)");
-$stmt->bind_param("sss", $name, $password, $email);
+$stmt->bind_param("sss", $name, hash('sha256',$password), $email);
 $stmt->execute();
 
 

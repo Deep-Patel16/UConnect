@@ -20,7 +20,7 @@
 
 	echo($value);
 
-	if ((is_null($value)) || ($value != $password)) {
+	if ((is_null($value)) || ($value != hash('sha256',$password))) {
 		echo("Incorrect password");
 	} else {
 		echo("Correct password");
