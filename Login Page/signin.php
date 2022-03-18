@@ -9,8 +9,8 @@
     	die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 	}
 
-	$id = $_GET['email']
-	$password = $_GET['password']
+	$id = $_GET['email'];
+	$password = $_GET['password'];
 
 	$stmt = $mysqli->query("SELECT password FROM Users WHERE email=?");
 	$stmt->bind_param('s', $id);
