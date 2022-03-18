@@ -26,7 +26,7 @@ $password = $_GET['password'];
 $stmt = $mysqli->prepare("INSERT INTO Users (username, password, id, email) VALUES (?,?,?,?)");
 $hashed_pass= hash('sha256',$password);
 $hashed_id=hash('sha256',$email);
-$stmt->bind_param("sss", $name, $hashed, $hashed_id, $email);
+$stmt->bind_param("ssss", $name, $hashed, $hashed_id, $email);
 $stmt->execute();
 
 
