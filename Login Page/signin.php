@@ -18,7 +18,6 @@
 	$stmt->bind_result($value);
 	$stmt->fetch();
 
-	echo($value);
 
 	if ((is_null($value)) || ($value != hash('sha256',$password))) {
 		echo("Incorrect password");
