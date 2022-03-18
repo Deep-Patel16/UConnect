@@ -12,7 +12,7 @@
 	$id = $_GET['email'];
 	$password = $_GET['password'];
 
-	$stmt = $mysqli->query("SELECT password FROM Users WHERE email=?");
+	$stmt = $mysqli->query("SELECT password FROM Users WHERE id=?");
 	$stmt->bind_param('s', $id);
 	$value = $stmt->execute();
 
