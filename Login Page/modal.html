@@ -171,15 +171,15 @@
         <h3 class="modal-title w-100 dark-grey-text font-weight-bold">Sign In</h3>
         <button type="button" class="close" data-dismiss="modal" aria-lable="close">&times;</button>
       </div>
-
+      <form action="signin.php">
       <div class="modal-body mx-4">
         <div class="md-form">
-          <input type="email" class="form-control validate">
+          <input type="email" class="form-control validate" name="email">
           <label data-error="wrong" data-success="right">Your Email</label>
         </div>
 
         <div class="md-form">
-          <input type="password" class="form-control validate">
+          <input type="password" class="form-control validate" name="password">
           <label data-error="wrong" data-success="right">Your Password</label>
           <p class="font-small blue-text d-flex justify-content-end">Forgot<a href="#" class="blue-text ml-1">Password?</a></p>
         </div>
@@ -189,8 +189,8 @@
         </div>
 
 
-
       </div>
+      </form>
     </div>
     </div>
   </div>
