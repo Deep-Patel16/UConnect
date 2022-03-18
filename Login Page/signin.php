@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 	require_once('../config.inc.php');
 
@@ -9,11 +12,11 @@
     	die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 	}
 
-	$id = $_GET['email'];
+	$_SESSION["id"] = $_GET['email'];
 	$password = $_GET['password'];
 
 	$stmt = $mysqli->prepare("SELECT password FROM Users WHERE id=?");
-	$stmt->bind_param('s', $id);
+	$stmt->bind_param('s', $_SESSION['id']);
 	$stmt->execute();
 	$stmt->bind_result($value);
 	$stmt->fetch();

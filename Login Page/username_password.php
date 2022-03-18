@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 
 
@@ -18,11 +20,12 @@ if($mysqli -> connect_error) {
 }
 
 $name = $_GET['username'];
-$email = $_GET['email'];
+$_SESSION["id"] = $_GET['email'];
 $password = $_GET['password'];
 
 $stmt = $mysqli->prepare("INSERT INTO Users (username, password, id) VALUES (?,?,?)");
-$stmt->bind_param("sss", $name, hash('sha256',$password), $email);
+$hashed= hash('sha256',$password);
+$stmt->bind_param("sss", $name, $hashed, $_SESSION["id"]);
 $stmt->execute();
 
 
