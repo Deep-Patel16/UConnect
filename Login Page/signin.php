@@ -16,6 +16,8 @@
 	$stmt->bind_param('s', $id);
 	$value = $stmt->execute();
 
+	echo($value);
+
 	if ((is_null($value)) || ($value == $password)) {
 		echo("Incorrect password");
 	} else {
