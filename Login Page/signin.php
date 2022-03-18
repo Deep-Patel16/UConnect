@@ -12,7 +12,8 @@ session_start();
     	die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 	}
 
-	$_SESSION["id"] = $_GET['email'];
+	$email = $_GET['email'];
+	$_SESSION['id'] = hash('sha256', $email);
 	$password = $_GET['password'];
 
 	$stmt = $mysqli->prepare("SELECT password FROM Users WHERE id=?");

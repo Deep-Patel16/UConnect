@@ -20,12 +20,13 @@ if($mysqli -> connect_error) {
 }
 
 $name = $_GET['username'];
-$_SESSION["id"] = $_GET['email'];
+$email = $_GET['email'];
 $password = $_GET['password'];
 
-$stmt = $mysqli->prepare("INSERT INTO Users (username, password, id) VALUES (?,?,?)");
-$hashed= hash('sha256',$password);
-$stmt->bind_param("sss", $name, $hashed, $_SESSION["id"]);
+$stmt = $mysqli->prepare("INSERT INTO Users (username, password, id, email) VALUES (?,?,?,?)");
+$hashed_pass= hash('sha256',$password);
+$hashed_id=hash('sha256',$email);
+$stmt->bind_param("sss", $name, $hashed, $hashed_id, $email);
 $stmt->execute();
 
 
