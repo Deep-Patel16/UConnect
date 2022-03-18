@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php
-	header('Location: ../Home_page/index.html');
+	header('Location: ../Home_page/index.php');
 	require_once('../config.inc.php');
 
 	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
