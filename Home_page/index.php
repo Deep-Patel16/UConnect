@@ -25,12 +25,11 @@ if($mysqli -> connect_error) {
 }
 
 $stmt = $_SESSION['sqli']->prepare("SELECT username FROM Users WHERE id=?");
-$id_var= "steve"
-$stmt->bind_param('s', $id_var);
+$stmt->bind_param('s', $_SESSION['id']);
 $stmt->execute();
 $stmt->bind_result($value);
 $stmt->fetch();
-echo("Logged in as " . $id_var);
+echo("Logged in as" . $value);
 ?>
 <div class="puzzles">
 
