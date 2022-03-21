@@ -25,7 +25,8 @@ if($mysqli -> connect_error) {
 }
 
 $stmt = $_SESSION['sqli']->prepare("SELECT username FROM Users WHERE id=?");
-$stmt->bind_param('s', $_SESSION['id']);
+$id_var= $SESSION["id"]
+$stmt->bind_param('s', $id_var);
 $stmt->execute();
 $stmt->bind_result($value);
 $stmt->fetch();
