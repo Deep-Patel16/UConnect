@@ -15,7 +15,12 @@ session_start();
 <body>
 <!-- partial:index.partial.html -->
 <?php
-  echo("Logged in as" . $_SESSION['id']);
+$stmt = $_SESSION['sqli']->prepare("SELECT username FROM Users WHERE id=?");
+$stmt->bind_param('s', $_SESSION['id']);
+$stmt->execute();
+$stmt->bind_result($value);
+$stmt->fetch();
+echo("Logged in as" . $value);
 ?>
 <div class="puzzles">
 
