@@ -15,7 +15,7 @@ session_start();
 <body>
 <!-- partial:index.partial.html -->
 <?php
-$id_var=$_SESSION['id'])
+$id_var=$_SESSION['id'];
 require_once('../config.inc.php');
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
