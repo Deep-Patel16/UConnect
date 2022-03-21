@@ -31,7 +31,6 @@ $stmt->bind_param('s', $id_var);
 $stmt->execute();
 $stmt->bind_result($value);
 $stmt->fetch();
-echo("Logged in as " . $id_var);
 ?>
 <div class="puzzles">
 
