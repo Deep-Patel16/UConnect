@@ -34,7 +34,7 @@ echo("Logged in as " . $value);
 ?>
 <div class="puzzles">
 
-  <div class="jigsaw1 grid" onlick=<?php header('Location: ../Profile_page/profilepage.html'); ?>>
+  <div class="jigsaw1 grid" onlick=profileRedirect()>
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
@@ -67,6 +67,14 @@ echo("Logged in as " . $value);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 <!-- partial -->
   <script  src="./script.js"></script>
+
+<script type=text/javascript>
+
+function profileRedirect() {
+  window.location.href('../Profile_page/profilepage.html');
+}
+
+</script>
 
 </body>
 </html>
