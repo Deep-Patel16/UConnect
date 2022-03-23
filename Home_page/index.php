@@ -34,7 +34,7 @@ echo("Logged in as " . $value);
 ?>
 <div class="puzzles">
 
-  <div class="jigsaw1 grid" onlick=profileRedirect()>
+  <div class="jigsaw1 grid" onlick="profileRedirect()">
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
