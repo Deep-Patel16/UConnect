@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php
-	header('Location: ../Home_page/index.php');
+
 	require_once('../config.inc.php');
 
 	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -24,7 +24,9 @@ session_start();
 
 
 	if ((is_null($value)) || ($value != hash('sha256',$password))) {
+		header('Location: modal.html');
 		echo("Incorrect password");
 	} else {
+		header('Location: ../Home_page/index.php');
 		echo("Correct password");
 	}
