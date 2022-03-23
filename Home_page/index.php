@@ -34,12 +34,14 @@ echo("Logged in as " . $value);
 ?>
 <div class="puzzles">
 
-  <div class="jigsaw1 grid" href="https://web.cs.manchester.ac.uk/e35918rs/first_group_project/Profile_page/profilepage.html">
+  <div class="jigsaw1 grid">
+    <a href="https://web.cs.manchester.ac.uk/e35918rs/first_group_project/Profile_page/profilepage.html">
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
       <span class="l"></span>
       <span class="text">Profile</span>
+    </a>
   </div>
   <div class="jigsaw3 grid">
       <span class="t"></span>
