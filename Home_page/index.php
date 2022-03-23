@@ -34,7 +34,7 @@ echo("Logged in as " . $value);
 ?>
 <div class="puzzles">
 
-  <div class="jigsaw1 grid">
+  <div class="jigsaw1 grid" onlick=<?php header('Location: Profile_page/profilepage.html'); ?>>
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
