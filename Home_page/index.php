@@ -49,6 +49,7 @@ echo("Logged in as " . $value);
       <span class="l"></span>
       <span class="text">Notifications</span>
   </div>
+  <a href="../Friends_page/final.html">
   <div class="jigsaw2 grid">
       <span class="t"></span>
       <span class="r"></span>
@@ -56,6 +57,7 @@ echo("Logged in as " . $value);
       <span class="l"></span>
       <span class="text">Friends</span>
   </div>
+</a>
   <div class="jigsaw4 grid">
       <span class="t"></span>
       <span class="r"></span>
