@@ -34,7 +34,7 @@ echo("Logged in as " . $value);
 ?>
 <div class="puzzles">
 
-  <div class="jigsaw1 grid" onlick="profileRedirect()">
+  <div class="jigsaw1 grid" href="../Profile_page/profilepage.html">
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
@@ -68,13 +68,6 @@ echo("Logged in as " . $value);
 <!-- partial -->
   <script  src="./script.js"></script>
 
-<script type=text/javascript>
-
-function profileRedirect() {
-  location.href = '../Profile_page/profilepage.html';
-}
-
-</script>
 
 </body>
 </html>
