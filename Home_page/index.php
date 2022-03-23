@@ -71,7 +71,7 @@ echo("Logged in as " . $value);
 <script type=text/javascript>
 
 function profileRedirect() {
-  window.location.href = '../Profile_page/profilepage.html';
+  location.href = '../Profile_page/profilepage.html';
 }
 
 </script>
