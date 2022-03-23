@@ -19,9 +19,9 @@ if($mysqli -> connect_error) {
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 }
 
-$name = $_GET['username'];
-$email = $_GET['email'];
-$password = $_GET['password'];
+$name = $_POST['username'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
 $stmt = $mysqli->prepare("INSERT INTO Users (username, password, id, email) VALUES (?,?,?,?)");
 $hashed_pass= hash('sha256',$password);
