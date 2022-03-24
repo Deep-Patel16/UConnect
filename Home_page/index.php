@@ -33,7 +33,7 @@ $stmt->fetch();
 echo("Logged in as " . $value);
 ?>
 <div class="puzzles">
-  <a href="../Profile_page/profilepage.html">
+  <a href="../Profile_page/profilepage.php">
   <div class="jigsaw1 grid">
       <span class="t"></span>
       <span class="r"></span>
