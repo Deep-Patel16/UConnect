@@ -53,7 +53,7 @@ echo("Logged in as " . $value);
   </div>
 
   <div class="jigsaw2 grid">
-    <a href="../Friends_page/final.html">
+    <a href="../Friends_page/algorithm.php">
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>

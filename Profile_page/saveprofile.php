@@ -104,7 +104,20 @@ if (is_null($is_id)) {
 $stmt->execute();
 $stmt->close();
 
+/*
 
+$image = $_POST["image_input"];
+$imgContent = addslashes(file_get_contents($image));
+$select_stmt = $mysqli->prepare("SELECT id FROM Profile_images WHERE id=?");
+$select_stmt->bind_param("s", $id_var);
+$select_stmt->execute();
+$select_stmt->bind_result($is_id1);
+$select_stmt->fetch();
+$select_stmt->close();
+if (is_null($is_id)) {
+  $stmt = $mysqli->prepare("INSERT INTO Profile_images(ID,Profile_Image)" VALUES (?,?))
+  $stmt->bind_param("sb",$)
+*/
 
 
 
