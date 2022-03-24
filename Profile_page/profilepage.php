@@ -87,8 +87,8 @@ session_start();
                 </div>
                 <form action = "saveprofile.php" method = "post">
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name" value="" name="forename"></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="Surname" name="surname"></div>
+                    <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name"  name="forename" /></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"  placeholder="Surname" name="surname" /></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" value="" name="course"></div>

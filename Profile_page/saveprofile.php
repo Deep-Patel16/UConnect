@@ -102,6 +102,11 @@ if (is_null($is_id)) {
                     $values_to_add[9], $values_to_add[10], $id_var);
 }
 $stmt->execute();
+$stmt->close();
+
+
+
+
 
 $mysqli->close();
 
