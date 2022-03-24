@@ -116,7 +116,7 @@ if(!empty($_FILES["image_input"]["name"])) {
     $allowTypes = array('jpg','png','jpeg','gif');
     if(in_array($fileType, $allowTypes)){
         $image = $_FILES['image_input']['tmp_name'];
-        $img_content = mysqli_real_escape_string($mysqli,file_get_contents($image));
+        $img_content = file_get_contents($image);
     }
 }
 echo($image);
