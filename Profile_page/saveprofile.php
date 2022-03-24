@@ -139,7 +139,7 @@ if (is_null($is_id1)) {
 } else{
   echo("hello");
   $stmt = $mysqli->prepare("UPDATE Profile_Images SET Profile_Image=? WHERE ID=?");
-  $stmt->bind_param("ss", $null, $id_var);
+  $stmt->bind_param("ss", null, $id_var);
   foreach (str_split($img_content, 10240) as $chunk) {
         $stmt->send_long_data(0, $chunk);
   }
