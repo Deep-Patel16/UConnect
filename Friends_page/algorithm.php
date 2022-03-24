@@ -12,6 +12,7 @@ $_SESSION['sqli'] = $mysqli;
 if($mysqli -> connect_error) {
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 }
+$record = array();
 
 $get1_stmt = $mysqli->prepare("SELECT * FROM Interests WHERE id=?");
 $get1_stmt->bind_param("s", $id_var);
