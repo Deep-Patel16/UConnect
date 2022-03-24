@@ -5,7 +5,7 @@ session_start();
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Pure CSS Gradient Background Animation</title>
+  <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://codepen.io/P1N2O/pen/xxbjYqx.css'><link rel="stylesheet" href="./style.css">
 
