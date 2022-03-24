@@ -114,14 +114,16 @@ $select_stmt->execute();
 $select_stmt->bind_result($is_id1);
 $select_stmt->fetch();
 $select_stmt->close();
-if (is_null($is_id)) {
+if (is_null($is_id1)) {
   $stmt = $mysqli->prepare("INSERT INTO Profile_Images(ID,Profile_Image) VALUES (?,?)");
   $stmt->bind_param("sb",$id_var,$img_content);
-} else{}
-  $stmt = $mysqli->prepare("UPDATE Profile_images SET Profile_Image=? WHERE id=?);
+} else{
+  $stmt = $mysqli->prepare("UPDATE Profile_images SET Profile_Image=? WHERE id=?");
   $stmt->bind_param("sb",$id_var,$img_content);
+}
 
-
+$stmt->execute();
+$stmt->close();
 
 
 $mysqli->close();
