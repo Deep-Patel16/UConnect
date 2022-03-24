@@ -61,9 +61,9 @@ for ($x = 0; $x < 3; $x++) {
 
 $stmt = $mysqli->prepare("INSERT INTO Interests(id,Sports,Movies,Books,VideoGames,Music,Science,Art,Food,Fashion,Anime,Computers)
                           VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
-$stmt->bind_param("siiiiiiiiiii", $id_var, $values_to_add[0], $values_to_add[0], $values_to_add[0], $values_to_add[0],
-                  $values_to_add[0], $values_to_add[0], $values_to_add[0], $values_to_add[0], $values_to_add[0],
-                  $values_to_add[0], $values_to_add[0]);
+$stmt->bind_param("siiiiiiiiiii", $id_var, $values_to_add[0], $values_to_add[1], $values_to_add[2], $values_to_add[3],
+                  $values_to_add[4], $values_to_add[5], $values_to_add[6], $values_to_add[7], $values_to_add[8],
+                  $values_to_add[9], $values_to_add[10]);
 $stmt->execute();
 
 $mysqli->close();
