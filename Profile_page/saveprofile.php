@@ -117,6 +117,7 @@ if(!empty($_FILES["image"]["name"])) {
     if(in_array($fileType, $allowTypes)){
         $image = $_FILES['image']['tmp_name'];
     }
+}
 
 $img_content = addslashes(file_get_contents($image));
 $select_stmt = $mysqli->prepare("SELECT ID FROM Profile_Images WHERE ID=?");
