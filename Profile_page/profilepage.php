@@ -71,14 +71,14 @@ session_start();
                 </ul>
         </div>
     </nav>
-<form action = "saveprofile.php" method = "post">
+<form action = "saveprofile.php" method = "post" enctype="multipart/form-data">
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
 
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
             <div id="display_image"></div>
-            <input type="file" accept="image/*"id="image_input" name="image_input" enctype="multipart/form-data" hidden/>
+            <input type="file" accept="image/*"id="image_input" name="image_input" hidden/>
             <label for="image_input" id="image_input1">Choose file</label>
         </div>
         </div>
