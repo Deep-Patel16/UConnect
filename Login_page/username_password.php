@@ -30,11 +30,6 @@ $stmt = $mysqli->prepare("INSERT INTO Users (username, password, id, email) VALU
 $stmt->bind_param("ssss", $name, $hashed_pass, $hashed_id, $email);
 $stmt->execute();
 
-$stmt2 = $mysqli->prepare("INSERT INTO Interests (id) VALUES (?)");
-$stmt2->bind_param("s", $hashed_id);
-$stmt->execute();
-
-
 
 $mysqli->close();
 
