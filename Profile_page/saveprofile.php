@@ -116,11 +116,12 @@ if(!empty($_FILES["image_input"]["name"])) {
     $allowTypes = array('jpg','png','jpeg','gif');
     if(in_array($fileType, $allowTypes)){
         $image = $_FILES['image_input']['tmp_name'];
-        $img_content = addslashes(file_get_contents($image));
+        $img_content = mysql_escape_string(file_get_contents($image));
     }
 }
 echo($image);
-//echo($img_content);
+echo($img_content);
+
 
 $select_stmt = $mysqli->prepare("SELECT ID FROM Profile_Images WHERE ID=?");
 $select_stmt->bind_param("s", $id_var);
