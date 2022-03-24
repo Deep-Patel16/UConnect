@@ -120,7 +120,7 @@ if(!empty($_FILES["image_input"]["name"])) {
     }
 }
 echo($image);
-echo($img_content);
+//echo($img_content);
 
 $select_stmt = $mysqli->prepare("SELECT ID FROM Profile_Images WHERE ID=?");
 $select_stmt->bind_param("s", $id_var);
