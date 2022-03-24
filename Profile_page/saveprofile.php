@@ -132,6 +132,7 @@ if (is_null($is_id1)) {
   $stmt = $mysqli->prepare("INSERT INTO Profile_Images(ID,Profile_Image) VALUES (?,?)");
   $stmt->bind_param("sb",$id_var,$img_content);
 } else{
+  echo("hello");
   $stmt = $mysqli->prepare("UPDATE Profile_Images SET Profile_Image=? WHERE ID=?");
   $stmt->bind_param("bs", $img_content, $id_var);
 }
