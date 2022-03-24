@@ -132,17 +132,17 @@ $select_stmt->fetch();
 $select_stmt->close();
 if (is_null($is_id1)) {
   $stmt = $mysqli->prepare("INSERT INTO Profile_Images(ID,Profile_Image) VALUES (?,?)");
-  $stmt->bind_param("ss",$id_var,$img_content);
-  /*foreach (str_split($img_content, 10240) as $chunk) {
+  $stmt->bind_param("ss",$id_var,$null);
+  foreach (str_split($img_content, 10240) as $chunk) {
         $stmt->send_long_data(1, $chunk);
-  }*/
+  }
 } else{
   echo("hello");
   $stmt = $mysqli->prepare("UPDATE Profile_Images SET Profile_Image=? WHERE ID=?");
-  $stmt->bind_param("ss", $img_content, $id_var);
-  /*foreach (str_split($img_content, 10240) as $chunk) {
+  $stmt->bind_param("ss", $null, $id_var);
+  foreach (str_split($img_content, 10240) as $chunk) {
         $stmt->send_long_data(0, $chunk);
-  }*/
+  }
 }
 
 $stmt->execute();
