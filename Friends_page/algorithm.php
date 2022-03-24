@@ -22,7 +22,7 @@ $get1_stmt->bind_result($record[0],$record[1],$record[2],$record[3],$record[4],$
 $get1_stmt->fetch();
 $get1_stmt->close();
 
-echo($record);
+echo($record[3]);
 
 
  ?>
