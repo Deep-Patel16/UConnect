@@ -66,7 +66,7 @@ session_start();
                 id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="../Home_page/index.php">HomePage</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Friends</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="../Friends_page/final.html">Friends</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Notifications</a></li>
                 </ul>
         </div>
@@ -85,12 +85,13 @@ session_start();
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Profile Settings</h4>
                 </div>
+                <form action = "saveprofile.php" method = "post">
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="First name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="Surname"></div>
+                    <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name" value="" name="forename"></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="Surname" name="surname"></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" value=""></div>
+                    <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" value="" name="course"></div>
 
 
                 </div>
@@ -101,7 +102,7 @@ session_start();
                 </div>
                 <!-- Dropdown starts here -->
 
-                  <form class="topNav" action = "saveprofile.php" method = "post">
+
                     <select name = "choice1">
                       <option value = "Sports">Sports</option>
                       <option value = "Movies">Movies</option>

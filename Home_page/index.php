@@ -33,15 +33,17 @@ $stmt->fetch();
 echo("Logged in as " . $value);
 ?>
 <div class="puzzles">
-  <a href="../Profile_page/profilepage.php">
+
   <div class="jigsaw1 grid">
+    <a href="../Profile_page/profilepage.php">
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
       <span class="l"></span>
       <span class="text">Profile</span>
+      </a>
   </div>
-  </a>
+
   <div class="jigsaw3 grid">
       <span class="t"></span>
       <span class="r"></span>
@@ -49,15 +51,17 @@ echo("Logged in as " . $value);
       <span class="l"></span>
       <span class="text">Notifications</span>
   </div>
-  <a href="../Friends_page/final.html">
+
   <div class="jigsaw2 grid">
+    <a href="../Friends_page/final.html">
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
       <span class="l"></span>
       <span class="text">Friends</span>
+      </a>
   </div>
-</a>
+
   <div class="jigsaw4 grid">
       <span class="t"></span>
       <span class="r"></span>

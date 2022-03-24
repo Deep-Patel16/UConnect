@@ -17,6 +17,9 @@ $choice1 = $_POST['choice1'];
 $choice2 = $_POST['choice2'];
 $choice3 = $_POST['choice3'];
 
+$forename = $_POST['forename'];
+$surname = $_POST['surname'];
+
 $choices = array($choice1, $choice2, $choice3);
 
 $values_to_add = array(0,0,0,0,0,0,0,0,0,0,0);
