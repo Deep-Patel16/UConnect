@@ -23,10 +23,15 @@ $name = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$stmt = $mysqli->prepare("INSERT INTO Users (username, password, id, email) VALUES (?,?,?,?)");
 $hashed_pass= hash('sha256',$password);
 $hashed_id=hash('sha256',$email);
+
+$stmt = $mysqli->prepare("INSERT INTO Users (username, password, id, email) VALUES (?,?,?,?)");
 $stmt->bind_param("ssss", $name, $hashed_pass, $hashed_id, $email);
+$stmt->execute();
+
+$stmt2 = $mysqli->prepare("INSERT INTO Interests (id) VALUES (?)");
+$stmt2->bind_param("s", $hashed_id);
 $stmt->execute();
 
 
