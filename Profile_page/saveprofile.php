@@ -114,8 +114,9 @@ if(!empty($_FILES["image"]["name"])) {
 
     // Allow certain file formats
     $allowTypes = array('jpg','png','jpeg','gif');
-    if(in_array($fileType, $allowTypes)){ 
+    if(in_array($fileType, $allowTypes)){
         $image = $_FILES['image']['tmp_name'];
+    }
 
 $img_content = addslashes(file_get_contents($image));
 $select_stmt = $mysqli->prepare("SELECT ID FROM Profile_Images WHERE ID=?");
