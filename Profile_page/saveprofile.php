@@ -107,6 +107,7 @@ $stmt->close();
 
 
 $image = $_POST["image_input"];
+echo($image);
 $img_content = addslashes(file_get_contents($image));
 $select_stmt = $mysqli->prepare("SELECT ID FROM Profile_Images WHERE ID=?");
 $select_stmt->bind_param("s", $id_var);
