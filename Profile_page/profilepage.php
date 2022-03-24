@@ -65,7 +65,7 @@ session_start();
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">HomePage</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="../Home_page/index.php">HomePage</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Friends</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Notifications</a></li>
                 </ul>
