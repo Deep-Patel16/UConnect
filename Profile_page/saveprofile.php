@@ -106,8 +106,17 @@ $stmt->close();
 
 
 
-$image = $_POST["image_input"];
-echo($image);
+
+if(!empty($_FILES["image"]["name"])) {
+    // Get file info
+    $fileName = basename($_FILES["image"]["name"]);
+    $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+
+    // Allow certain file formats
+    $allowTypes = array('jpg','png','jpeg','gif');
+    if(in_array($fileType, $allowTypes)){ 
+        $image = $_FILES['image']['tmp_name'];
+
 $img_content = addslashes(file_get_contents($image));
 $select_stmt = $mysqli->prepare("SELECT ID FROM Profile_Images WHERE ID=?");
 $select_stmt->bind_param("s", $id_var);
@@ -119,7 +128,7 @@ if (is_null($is_id1)) {
   $stmt = $mysqli->prepare("INSERT INTO Profile_Images(ID,Profile_Image) VALUES (?,?)");
   $stmt->bind_param("sb",$id_var,$img_content);
 } else{
-  $stmt = $mysqli->prepare("UPDATE Profile_images SET Profile_Image=? WHERE ID=?");
+  $stmt = $mysqli->prepare("UPDATE Profile_Images SET Profile_Image=? WHERE ID=?");
   $stmt->bind_param("bs", $img_content, $id_var,);
 }
 
