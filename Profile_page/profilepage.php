@@ -71,9 +71,10 @@ session_start();
                 </ul>
         </div>
     </nav>
+<form action = "saveprofile.php" method = "post">
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
-      <form action = "saveprofile.php" method = "post">
+
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
             <div id="display_image"></div>
@@ -159,9 +160,10 @@ session_start();
                 <div class="col-md-12"><label class="labels"><img src="linkedin.png" alt="Linkedin Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Linkedin Id" value=""></div><br>
             </div>
         </div>
-        </form>
+
     </div>
 </div>
+</form>
 </div>
 </div>
     <script  src="./profilepage.js"></script>
