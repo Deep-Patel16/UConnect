@@ -13,7 +13,7 @@ if($mysqli -> connect_error) {
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 }
 
-$get1_stmt = $mysqli->prepare("SELECT * FROM Interests WHERE id=?")
+$get1_stmt = $mysqli->prepare("SELECT * FROM Interests WHERE id=?");
 $get1_stmt->bind_param("s", $id_var);
 $get1_stmt->execute();
 $get1_stmt->bind_result($record);
