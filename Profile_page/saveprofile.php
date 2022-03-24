@@ -2,6 +2,8 @@
 
 session_start();
 
+header('Location: profilepage.php');
+
 $id_var = $_SESSION['id'];
 
 require_once('../config.inc.php');
@@ -19,6 +21,7 @@ $choice3 = $_POST['choice3'];
 
 $forename = $_POST['forename'];
 $surname = $_POST['surname'];
+$course = $_POST['course'];
 
 $choices = array($choice1, $choice2, $choice3);
 
@@ -61,6 +64,11 @@ for ($x = 0; $x < 3; $x++) {
       break;
   }
 }
+
+$profile_stmt = $mysqli->prepare("UPDATE Users SET Forename=?, Surname=?, Course=? WHERE id=?");
+$profile_stmt->bind_param("ssss", $forename, $surname, $course, $id_var);
+$profile_stmt->execute();
+$profile_stmt->close();
 
 $select_stmt = $mysqli->prepare("SELECT id FROM Interests WHERE id=?");
 $select_stmt->bind_param("s", $id_var);
