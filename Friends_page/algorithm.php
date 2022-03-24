@@ -12,12 +12,13 @@ $_SESSION['sqli'] = $mysqli;
 if($mysqli -> connect_error) {
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
 }
-$record = array();
+$record = array("","","","","","","","","","","","");
 
 $get1_stmt = $mysqli->prepare("SELECT * FROM Interests WHERE id=?");
 $get1_stmt->bind_param("s", $id_var);
 $get1_stmt->execute();
-$get1_stmt->bind_result($record);
+$get1_stmt->bind_result($record[0],$record[1],$record[2],$record[3],$record[4],$record[5],
+                        $record[6],$record[7],$record[8],$record[9],$record[10],$record[11],);
 $get1_stmt->fetch();
 $get1_stmt->close();
 
