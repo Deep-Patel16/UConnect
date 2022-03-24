@@ -64,6 +64,7 @@ $select_stmt->bind_param("s", $id_var);
 $select_stmt->execute();
 $select_stmt->bind_result($is_id);
 $select_stmt->fetch();
+$select_stmt->close();
 
 if (is_null($is_id)) {
   $stmt = $mysqli->prepare("INSERT INTO Interests(id,Sports,Movies,Books,VideoGames,Music,Science,Art,Food,Fashion,Anime,Computers)
@@ -87,7 +88,7 @@ if (is_null($is_id)) {
                                                   WHERE id=?");
   $stmt->bind_param("iiiiiiiiiiis", $values_to_add[0], $values_to_add[1], $values_to_add[2], $values_to_add[3],
                     $values_to_add[4], $values_to_add[5], $values_to_add[6], $values_to_add[7], $values_to_add[8],
-                    $values_to_add[9], $values_to_add[10], $id_var);                  
+                    $values_to_add[9], $values_to_add[10], $id_var);
 }
 $stmt->execute();
 
