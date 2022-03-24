@@ -96,18 +96,12 @@
                 </div>
                 <!-- Dropdown starts here -->
                 <nav class="topNav">
-                <ul>
-                  <li>One</li>
-                  <li>Two</li>
-                  <li>Three</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                </ul>
+                  <form action = "/cgi-bin/dropdown.cgi" method = "post">
+                    <select name = "dropdown">
+                      <option value = "Data Structures" selected>Data Structures</option>
+                      <option value = "Data Mining">Data Mining</option>
+                    </select>
+                    <input type = "submit" value = "Submit" />
               </nav>
                 <!-- Dropdown ends here -->
                 <div class="mt-4 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
