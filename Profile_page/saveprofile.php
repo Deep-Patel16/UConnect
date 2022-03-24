@@ -2,7 +2,7 @@
 
 session_start();
 
-//header('Location: profilepage.php');
+header('Location: profilepage.php');
 
 $id_var = $_SESSION['id'];
 
@@ -119,8 +119,7 @@ if(!empty($_FILES["image_input"]["name"])) {
         $img_content = file_get_contents($image);
     }
 }
-echo($image);
-echo($img_content);
+
 
 
 $null = null;
