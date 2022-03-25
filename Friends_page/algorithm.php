@@ -49,11 +49,11 @@ $stmt = $mysqli->prepare("SELECT id FROM Interests WHERE NOT id = ?
                                                     AND ? > 0");
 
 for ($x = 0; $x < 3; $x++) {
-  
+
   $stmt->bind_param("ss",$id_var,$choices[$x]);
   $stmt->execute();
   $result = $stmt->get_result();
-  while ($rows = $result->fetch_all(MYSQLI_ASSOC)){
+  while ($rows = $result->fetch_array(MYSQLI_ASSOC)){
     foreach($rows as $row) {
       if(array_key_exists($row['id'], $other_users)){
         $other_users[$row['id']] = $other_users[$row['id']] + (3-$x);
