@@ -49,6 +49,7 @@ for ($x = 0; $x < 3; $x++) {
   $stmt = $mysqli->prepare("SELECT id FROM Interests WHERE NOT id = ?
                                                       AND ? > 0");
   $stmt->bind_param("ss",$id_var,$choices[$x]);
+  $stmt->execute();
   $result = $stmt->get_result();
   $rows = $result->fetch_all(MYSQLI_ASSOC);
   foreach($rows as $row) {
