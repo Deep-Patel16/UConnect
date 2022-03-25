@@ -25,7 +25,7 @@ $get1_stmt->close();
 $interests = array("Sports", "Movies", "Books", "VideoGames", "Music", "Science", "Art",
                     "Food", "Fashion", "Anime", "Computer");
 
-for ($x = 0; $x < 11, $x++) {
+for ($x = 0; $x < 11; $x++) {
   switch($record[$x+1]) {
     case 3:
       $choice1 = $interests[$x];
