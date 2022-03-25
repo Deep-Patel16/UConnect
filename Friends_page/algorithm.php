@@ -46,7 +46,8 @@ $other_users = array();
 var_dump($other_users);
 
 for ($x = 0; $x < 3; $x++) {
-  $result = $mysqli->query("SELECT id FROM Interests WHERE $choices[$x] > 0 AND NOT id = $id_var");
+  $result = $mysqli->query("SELECT id FROM Interests WHERE NOT id = $id_var
+                                                      AND $choices[$x] > 0");
   $rows = $result->fetch_all(MYSQLI_ASSOC);
   foreach($rows as $row) {
     if(array_key_exists($row['id'], $other_users)){
