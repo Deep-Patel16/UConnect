@@ -23,7 +23,7 @@ $get1_stmt->fetch();
 $get1_stmt->close();
 
 $interests = array("Sports", "Movies", "Books", "VideoGames", "Music", "Science", "Art",
-                    "Food", "Fashion", "Anime", "Computer");
+                    "Food", "Fashion", "Anime", "Computers");
 
 for ($x = 0; $x < 11; $x++) {
   switch($record[$x+1]) {
