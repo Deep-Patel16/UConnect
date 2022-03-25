@@ -52,7 +52,6 @@ for ($x = 0; $x < 3; $x++) {
   $result = $stmt->get_result();
   while ($rows = $result->fetch_all(MYSQLI_ASSOC)){
     foreach($rows as $row) {
-      echo($rows);
       if ($row[$choices[$x]] > 0) {
         if(array_key_exists($row['id'], $other_users)){
           $other_users[$row['id']] = $other_users[$row['id']] + (3-$x);
