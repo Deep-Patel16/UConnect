@@ -22,7 +22,44 @@ $get1_stmt->bind_result($record[0],$record[1],$record[2],$record[3],$record[4],$
 $get1_stmt->fetch();
 $get1_stmt->close();
 
-echo($record[3]);
+$interests = array("Sports", "Movies", "Books", "VideoGames", "Music", "Science", "Art",
+                    "Food", "Fashion", "Anime", "Computer");
+
+for ($x = 0; $x < 11, $x++) {
+  switch($record[$x+1]) {
+    case 3:
+      $choice1 = $interests[$x];
+      break;
+    case 2:
+      $choice2 = $interests[$x];
+      break;
+    case 1:
+      $choice3 = $interests[$x];
+      break;
+    default:
+      break;
+
+  }
+}
+$choices = array($choice1, $choice2, $choice3);
+$other_users = array();
+
+for ($x = 0; $x < 3; $x++) {
+  $result = $mysqli->query("SELECT id, $choices[$x] FROM Interests WHERE $choices[$x] > 0");
+  $rows = $result->fetch_all(MYSQLI_ASSOC);
+  foreach($rows as $row) {
+    if(array_key_exists($row['id'], $other_users)){
+      $other_users[$row['id']] = $other_users[$row['id']] + (3-$x);
+    } else {
+      $other_users[$row['id']] = 3-$x;
+    }
+  }
+}
+var_dump($other_users);
+
+
+
+
 
 
  ?>

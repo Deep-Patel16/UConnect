@@ -112,7 +112,7 @@ if(!empty($_FILES["image_input"]["name"])) {
     $fileName = basename($_FILES["image_input"]["name"]);
     $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
 
-    // Allow certain file formats
+    // Allow file formats
     $allowTypes = array('jpg','png','jpeg','gif');
     if(in_array($fileType, $allowTypes)){
         $image = $_FILES['image_input']['tmp_name'];
