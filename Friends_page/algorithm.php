@@ -45,7 +45,7 @@ $choices = array($choice1, $choice2, $choice3);
 $other_users = array();
 
 for ($x = 0; $x < 3; $x++) {
-  $result = $mysqli->query("SELECT id, $choices[$x] FROM Interests WHERE $choices[$x] > 0");
+  $result = $mysqli->query("SELECT id, $choices[$x] FROM Interests WHERE $choices[$x] > 0 AND id <> $id_var");
   $rows = $result->fetch_all(MYSQLI_ASSOC);
   foreach($rows as $row) {
     if(array_key_exists($row['id'], $other_users)){
