@@ -50,9 +50,9 @@ $stmt->bind_param("s",$id_var);
 for ($x = 0; $x < 3; $x++) {
   $stmt->execute();
   $result = $stmt->get_result();
-  while ($rows = $result->fetch_array(MYSQLI_ASSOC)){
+  while ($rows = $result->fetch_all(MYSQLI_ASSOC)){
     foreach($rows as $row) {
-      echo($row);
+      echo($rows);
       if ($row[$choices[$x]] > 0) {
         if(array_key_exists($row['id'], $other_users)){
           $other_users[$row['id']] = $other_users[$row['id']] + (3-$x);
