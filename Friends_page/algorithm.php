@@ -91,6 +91,7 @@ for ($x = 0; $x < 3; $x++) {
     }
   }
 }
+var_dump($other_users);
 arsort($other_users);
 $stmt->close();
 
