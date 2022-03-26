@@ -23,7 +23,6 @@ $choice3 = $_POST['choice3'];
 $forename = $_POST['forename'];
 $surname = $_POST['surname'];
 $course = $_POST['course'];
-echo($forename);
 
 $choices = array($choice1, $choice2, $choice3);
 $details = array("Forename"=>$forename, "Surname"=>$surname, "Course"=>$course);
@@ -69,7 +68,7 @@ for ($x = 0; $x < 3; $x++) {
 }
 
 foreach($details as $x=>$x_value) {
-  if (!is_null($x_value)) {
+  if (!is_empty($x_value)) {
     $profile_stmt = $mysqli->prepare("UPDATE Users SET $x=? WHERE id=?");
     $profile_stmt->bind_param("ss",$x_value, $id_var);
     $profile_stmt->execute();
