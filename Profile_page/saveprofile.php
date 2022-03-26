@@ -23,6 +23,7 @@ $choice3 = $_POST['choice3'];
 $forename = $_POST['forename'];
 $surname = $_POST['surname'];
 $course = $_POST['course'];
+echo($forename);
 
 $choices = array($choice1, $choice2, $choice3);
 $details = array("Forename"=>$forename, "Surname"=>$surname, "Course"=>$course);
