@@ -105,7 +105,7 @@ $stmt->close();
    $stmt->bind_param("s", $id);
    $stmt->bind_result($result);
    $stmt->execute();
-   $img = $result->fetch_array();
+   $img = $result->fetch_assoc();
    $stmt->close();
 
    $details_stmt = $mysqli->prepare("SELECT Forename, Surname, Course FROM Users WHERE id=?");
