@@ -1,5 +1,5 @@
 <?php
-
+header('Content-type: image/jpeg');
 session_start();
 
 ?>
@@ -105,8 +105,8 @@ $stmt->close();
    $stmt->bind_result($result);
    $stmt->execute();
    $img = $result->fetch_assoc();
-   header('Content-type: image/jpeg');
-   imagejpeg($img['image']);
+   var_dump($img);
+
    $stmt->close();
 
    $details_stmt = $mysqli->prepare("SELECT Forename, Surname, Course FROM Users WHERE id=?");
