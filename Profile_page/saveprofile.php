@@ -19,11 +19,13 @@ $choice1 = $_POST['choice1'];
 $choice2 = $_POST['choice2'];
 $choice3 = $_POST['choice3'];
 
+
 $forename = $_POST['forename'];
 $surname = $_POST['surname'];
 $course = $_POST['course'];
 
 $choices = array($choice1, $choice2, $choice3);
+$details = array("Forename"=>$forename, "Surname"=>$surname, "Course"=>$course);
 
 $values_to_add = array(0,0,0,0,0,0,0,0,0,0,0);
 
@@ -65,10 +67,14 @@ for ($x = 0; $x < 3; $x++) {
   }
 }
 
-$profile_stmt = $mysqli->prepare("UPDATE Users SET Forename=?, Surname=?, Course=? WHERE id=?");
-$profile_stmt->bind_param("ssss", $forename, $surname, $course, $id_var);
-$profile_stmt->execute();
-$profile_stmt->close();
+foreach($details as $x=>$x_value) {
+  if (!is_null($x_value)) {
+    $profile_stmt = $mysqli->prepare("UPDATE Users SET ?=? WHERE id=?");
+    $profile_stmt->bind_param("sss", $x, $x_value, $id_var);
+    $profile_stmt->execute();
+    $profile_stmt->close();
+  }
+}
 
 $select_stmt = $mysqli->prepare("SELECT id FROM Interests WHERE id=?");
 $select_stmt->bind_param("s", $id_var);
@@ -118,34 +124,36 @@ if(!empty($_FILES["image_input"]["name"])) {
         $image = $_FILES['image_input']['tmp_name'];
         $img_content = file_get_contents($image);
     }
+    $null = null;
+    $select_stmt = $mysqli->prepare("SELECT ID FROM Profile_Images WHERE ID=?");
+    $select_stmt->bind_param("s", $id_var);
+    $select_stmt->execute();
+    $select_stmt->bind_result($is_id1);
+    $select_stmt->fetch();
+    $select_stmt->close();
+    if (is_null($is_id1)) {
+      $stmt = $mysqli->prepare("INSERT INTO Profile_Images(ID,Profile_Image) VALUES (?,?)");
+      $stmt->bind_param("sb",$id_var,$null);
+      foreach (str_split($img_content, 10240) as $chunk) {
+            $stmt->send_long_data(1, $chunk);
+      }
+    } else{
+
+      $stmt = $mysqli->prepare("UPDATE Profile_Images SET Profile_Image=? WHERE ID=?");
+      $stmt->bind_param("bs", $null, $id_var);
+      foreach (str_split($img_content, 10240) as $chunk) {
+            $stmt->send_long_data(0, $chunk);
+      }
+    }
+    $stmt->execute();
+    $stmt->close();
 }
 
 
 
-$null = null;
-$select_stmt = $mysqli->prepare("SELECT ID FROM Profile_Images WHERE ID=?");
-$select_stmt->bind_param("s", $id_var);
-$select_stmt->execute();
-$select_stmt->bind_result($is_id1);
-$select_stmt->fetch();
-$select_stmt->close();
-if (is_null($is_id1)) {
-  $stmt = $mysqli->prepare("INSERT INTO Profile_Images(ID,Profile_Image) VALUES (?,?)");
-  $stmt->bind_param("sb",$id_var,$null);
-  foreach (str_split($img_content, 10240) as $chunk) {
-        $stmt->send_long_data(1, $chunk);
-  }
-} else{
-  echo("hello");
-  $stmt = $mysqli->prepare("UPDATE Profile_Images SET Profile_Image=? WHERE ID=?");
-  $stmt->bind_param("bs", $null, $id_var);
-  foreach (str_split($img_content, 10240) as $chunk) {
-        $stmt->send_long_data(0, $chunk);
-  }
-}
 
-$stmt->execute();
-$stmt->close();
+
+
 
 
 $mysqli->close();
