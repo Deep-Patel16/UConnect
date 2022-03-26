@@ -66,7 +66,7 @@ session_start();
                 id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="../Home_page/index.php">HomePage</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="../Friends_page/final.html">Friends</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="../Friends_page/final.php">Friends</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Notifications</a></li>
                 </ul>
         </div>

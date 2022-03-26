@@ -119,7 +119,7 @@ if(!empty($_FILES["image_input"]["name"])) {
     $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
 
     // Allow file formats
-    $allowTypes = array('jpg','png','jpeg','gif');
+    $allowTypes = array('jpg','png','jpeg');
     if(in_array($fileType, $allowTypes)){
         $image = $_FILES['image_input']['tmp_name'];
         $img_content = file_get_contents($image);
