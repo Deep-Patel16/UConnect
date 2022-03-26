@@ -68,7 +68,7 @@ for ($x = 0; $x < 3; $x++) {
 }
 
 foreach($details as $x=>$x_value) {
-  if (!is_empty($x_value)) {
+  if (!empty($x_value)) {
     $profile_stmt = $mysqli->prepare("UPDATE Users SET $x=? WHERE id=?");
     $profile_stmt->bind_param("ss",$x_value, $id_var);
     $profile_stmt->execute();
