@@ -115,12 +115,41 @@ $stmt->close();
    $details_stmt->fetch();
    $details_stmt->close();
 
+   $friend_record = array("","","","","","","","","","","","");
+   $get_stmt = $mysqli->prepare("SELECT * FROM Interests WHERE id=?");
+   $get_stmt->bind_param("s", $id);
+   $get_stmt->execute();
+   $get_stmt->bind_result($friend_record[0],$friend_record[1],$friend_record[2],$friend_record[3],$friend_record[4],$friend_record[5],
+                           $friend_record[6],$friend_record[7],$friend_record[8],$friend_record[9],$friend_record[10],$friend_record[11],);
+   $get_stmt->fetch();
+   $get_stmt->close();
+
+   $interests = array("Sports", "Movies", "Books", "VideoGames", "Music", "Science", "Art",
+                       "Food", "Fashion", "Anime", "Computers");
+
+   for ($x = 0; $x < 11; $x++) {
+     switch($friend_record[$x+1]) {
+       case 3:
+         $choice1 = $interests[$x];
+         break;
+       case 2:
+         $choice2 = $interests[$x];
+         break;
+       case 1:
+         $choice3 = $interests[$x];
+         break;
+       default:
+         break;
+
+     }
+   }
+
    echo('<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
        <div class="card p-0">
            <div class="card-image"> <img src="data:png;base64, ' . $img . '" alt=""> </div>
            <div class="card-content d-flex flex-column align-items-center">
                <h4 class="pt-2">'. $fname . ' ' . $sname . ' </h4>
-               <h5>Course: '. $course . '</h5>
+               <h5>Course: '. $course . '<br>Likes: '. $choice1 .', '. $choice2 .', '. $choice3 .'</h5>
                <ul class="social-icons d-flex justify-content-center">
                    <li style="--i:1"> <a href="https://google.com"  target="_blank"> <span class="fab fa-facebook"></span> </a> </li>
                    <li style="--i:2"> <a href="#"> <span class="fab fa-linkedin"></span> </a> </li>
