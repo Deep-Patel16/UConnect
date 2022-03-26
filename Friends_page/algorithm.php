@@ -92,7 +92,6 @@ for ($x = 0; $x < 3; $x++) {
     }
   }
 }
-var_dump($other_users);
 arsort($other_users);
 $stmt->close();
 
@@ -106,6 +105,8 @@ $stmt->close();
    $stmt->bind_result($result);
    $stmt->execute();
    $img = $result->fetch_assoc();
+   header('Content-type: image/jpeg');
+   imagejpeg($img['image']);
    $stmt->close();
 
    $details_stmt = $mysqli->prepare("SELECT Forename, Surname, Course FROM Users WHERE id=?");
@@ -116,9 +117,9 @@ $stmt->close();
 
    echo('<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
        <div class="card p-0">
-           <div class="card-image"> <img src="data:image/png;base64, '. base64_encode($img['image']) . '" alt=""> </div>
+           <div class="card-image"> <img src=" '.$img["image"] . '" alt=""> </div>
            <div class="card-content d-flex flex-column align-items-center">
-               <h4 class="pt-2">'.($fname . " " . $sname) . ' </h4>
+               <h4 class="pt-2">'. $fname . ' ' . $sname . ' </h4>
                <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</h5>
                <ul class="social-icons d-flex justify-content-center">
                    <li style="--i:1"> <a href="https://google.com"  target="_blank"> <span class="fab fa-facebook"></span> </a> </li>
