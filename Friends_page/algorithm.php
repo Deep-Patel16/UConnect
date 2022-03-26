@@ -105,8 +105,7 @@ $stmt->close();
    $stmt->bind_param("s", $id);
    $stmt->bind_result($result);
    $stmt->execute();
-   $img = $result->fetch_assoc();
-   header("Content-type: image/jpg");
+   $img = $result->fetch_array();
    $stmt->close();
 
    $details_stmt = $mysqli->prepare("SELECT Forename, Surname, Course FROM Users WHERE id=?");
@@ -117,7 +116,7 @@ $stmt->close();
 ?>
  <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
      <div class="card p-0">
-         <div class="card-image"> <img src=<?php$img['image'];?> alt=""> </div>
+         <div class="card-image"> <img src="data:image/jpeg;base64, <?php. base64_encode($img['image']);?>" alt=""> </div>
          <div class="card-content d-flex flex-column align-items-center">
              <h4 class="pt-2"><?php echo($fname . " " . $sname); ?></h4>
              <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</h5>
