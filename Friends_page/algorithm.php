@@ -105,7 +105,7 @@ $stmt->close();
    $stmt->bind_result($result);
    $stmt->execute();
    $stmt->fetch();
-   echo($result);
+   $img = base64_encode($result);
 
    $stmt->close();
 
@@ -115,9 +115,9 @@ $stmt->close();
    $details_stmt->execute();
    $details_stmt->close();
 
-   /*echo('<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+   echo('<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
        <div class="card p-0">
-           <div class="card-image"> <img src="data:png;base64$img["image"] . -->" alt=""> </div>
+           <div class="card-image"> <img src="data:png;base64, ' . $img . '" alt=""> </div>
            <div class="card-content d-flex flex-column align-items-center">
                <h4 class="pt-2">'. $fname . ' ' . $sname . ' </h4>
                <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</h5>
@@ -130,5 +130,5 @@ $stmt->close();
            </div>
        </div>
    </div>
- <!-- End -->');*/
+ <!-- End -->');
  } ?>
