@@ -113,6 +113,7 @@ $stmt->close();
    $details_stmt->bind_param("s", $id);
    $details_stmt->bind_result($fname, $sname, $course);
    $details_stmt->execute();
+   $details_stmt->fetch();
    $details_stmt->close();
 
    echo('<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
