@@ -120,7 +120,7 @@ $stmt->close();
            <div class="card-image"> <img src="data:png;base64, ' . $img . '" alt=""> </div>
            <div class="card-content d-flex flex-column align-items-center">
                <h4 class="pt-2">'. $fname . ' ' . $sname . ' </h4>
-               <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</h5>
+               <h5>Course: '. $course . '</h5>
                <ul class="social-icons d-flex justify-content-center">
                    <li style="--i:1"> <a href="https://google.com"  target="_blank"> <span class="fab fa-facebook"></span> </a> </li>
                    <li style="--i:2"> <a href="#"> <span class="fab fa-linkedin"></span> </a> </li>
