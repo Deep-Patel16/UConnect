@@ -104,8 +104,9 @@ $stmt->close();
    $stmt->bind_param("s", $id);
    $stmt->bind_result($result);
    $stmt->execute();
-   $img = $result->fetch_array();
-   echo($img);
+   $stmt->fetch();
+   $img = $result->fetch_assoc();
+   echo($result);
 
    $stmt->close();
 
