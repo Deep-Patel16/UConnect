@@ -115,7 +115,7 @@ $stmt->close();
    $details_stmt->execute();
    $details_stmt->close();
 
-   echo('<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+   /*echo('<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
        <div class="card p-0">
            <div class="card-image"> <img src=" <!--.$img["image"] . -->" alt=""> </div>
            <div class="card-content d-flex flex-column align-items-center">
@@ -130,5 +130,5 @@ $stmt->close();
            </div>
        </div>
    </div>
- <!-- End -->');
+ <!-- End -->');*/
  } ?>
