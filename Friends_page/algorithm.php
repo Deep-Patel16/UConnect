@@ -105,7 +105,6 @@ $stmt->close();
    $stmt->bind_result($result);
    $stmt->execute();
    $stmt->fetch();
-   $img = $result->fetch_assoc();
    echo($result);
 
    $stmt->close();
