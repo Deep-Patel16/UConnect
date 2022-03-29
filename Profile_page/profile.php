@@ -180,7 +180,7 @@ $stmt->close();
 
                   <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block" >
                     <li><a href="../Home_page/index.html"><span style="color:purple">HomePage</span></a></li>
-                    <li><a href="#"><span style="color:purple">Friends</span></a></li>
+                    <li><a href="../Friends_page/final.php"><span style="color:purple">Friends</span></a></li>
                     <li ><a href="../Login_page/index.html"><span style="color:purple">LogOut</span></a></li>
                   </ul>
                 </nav>
@@ -192,7 +192,7 @@ $stmt->close();
               </div>
 
             </div>
-          </div>
+
 
         </header>
         </div>
