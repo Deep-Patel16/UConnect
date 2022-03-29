@@ -27,6 +27,6 @@ session_start();
 		header('Location: index.html');
 		echo("Incorrect password");
 	} else {
-		header('Location: ../Home_page/index.php');
+		header('Location: ../Home_page/home.php');
 		echo("Correct password");
 	}

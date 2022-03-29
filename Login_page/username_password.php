@@ -10,7 +10,7 @@ session_start();
 
 require_once('../config.inc.php');
 
-header('Location: ../Profile_page/profilepage.php');
+header('Location: ../Profile_page/profile.php');
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli($database_host, $database_user, $database_pass, $group_dbnames[0]);
