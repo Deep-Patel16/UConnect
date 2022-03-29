@@ -75,6 +75,9 @@ $user_img = base64_encode($result);
 $stmt->close();
 
 ?>
+
+<!-- <div class="card-image"> <img src="data:png;base64, ' . $img . '" alt=""> </div> -->
+
 <!doctype html>
 <html>
 <head>
@@ -203,6 +206,7 @@ $stmt->close();
                 <div class="col-md-3 border-right">
                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                     <div id="display_image"></div>
+                    <?php echo("<div class='card-image'> <img src='data:png;base64, '" . $user_img . " alt=''");?>> </div>
                     <input type="file" accept="image/*,.png"id="image_input" name="image_input" hidden/>
                     <label for="image_input" id="image_input1">Choose file</label>
                 </div>
