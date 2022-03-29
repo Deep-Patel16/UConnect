@@ -64,6 +64,8 @@ $word_array = $word_result->fetch_array();
 $word_statement->close();
 var_dump($word_array);
 
+
+//imagy stuff
 $stmt = $mysqli->prepare("SELECT Profile_Image FROM Profile_Images WHERE ID=?");
 $stmt->bind_param("s", $id_var);
 $stmt->bind_result($result);

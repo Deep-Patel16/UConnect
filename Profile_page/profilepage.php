@@ -53,6 +53,7 @@ if (is_null($drop_array)){
   }
 }
 $dropdown_statement ->close();
+
 //word_bits_statement
 
 $word_statement=$mysqli->prepare("SELECT id,Forename,Surname,Course FROM Users WHERE id=?");
@@ -62,7 +63,14 @@ $word_result = $word_statement->get_result();
 $word_array = $word_result->fetch_array();
 $word_statement->close();
 
+$stmt = $mysqli->prepare("SELECT Profile_Image FROM Profile_Images WHERE ID=?");
+$stmt->bind_param("s", $id_var);
+$stmt->bind_result($result);
+$stmt->execute();
+$stmt->fetch();
+$user_img = base64_encode($result);
 
+$stmt->close();
 
 ?>
 
@@ -142,7 +150,7 @@ $word_statement->close();
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
             <div id="display_image"></div>
-            <input type="file" accept="image/*"id="image_input" name="image_input" hidden/>
+            <input type="file" accept="image/*,.png"id="image_input" name="image_input" hidden/>
             <label for="image_input" id="image_input1">Choose file</label>
         </div>
         </div>
