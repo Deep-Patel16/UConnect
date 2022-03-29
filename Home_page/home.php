@@ -88,9 +88,9 @@
 
     </div>
 
-
-</header>
 </div>
+</header>
+
 <div class="puzzles">
 
   <div class="jigsaw1 grid">
