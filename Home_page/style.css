@@ -147,7 +147,7 @@ body {
   /* width: 48vh;
 
   margin: 15px; */
-	height: 48vh;
+	height: 100%;
   position: relative;
   -webkit-border-radius: 5%;
   -moz-border-radius: 5%;
@@ -198,7 +198,7 @@ body {
   /* width: 48vh;
    */
   /* margin: 15px; */
-	height: 48vh;
+	height: 100%;
   position: relative;
   -webkit-border-radius: 5%;
   -moz-border-radius: 5%;
