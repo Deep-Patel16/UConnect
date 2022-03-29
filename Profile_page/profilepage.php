@@ -16,7 +16,7 @@ $dropdown_statement->execute();
 $dropdown_statement->bind_result($drop);
 $drop1_array = array(null,null,null,null,null,null,null,null,null,null,null);
 $drop2_array = array(null,null,null,null,null,null,null,null,null,null,null);
-$drop3_array = array(null,null,null,null,null,null,null,null,null,null,null)
+$drop3_array = array(null,null,null,null,null,null,null,null,null,null,null);
 if (is_null($drop)){
 
 } else {
