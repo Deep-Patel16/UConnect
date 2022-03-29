@@ -24,7 +24,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>HomePage</title>
+  <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://codepen.io/P1N2O/pen/xxbjYqx.css'><link rel="stylesheet" href="./style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -53,7 +53,6 @@
 <!-- Style -->
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="friends.css">
 <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <link rel="shortcut icon" type="image/x-icon" href="logo.jpg" />
@@ -95,11 +94,11 @@
 <div class="puzzles">
 
   <div class="jigsaw1 grid">
+    <a href="../Profile_page/profile.php">
       <span class="t"></span>
       <span class="r"></span>
-      <span class="b"></span>
       <span class="l"></span>
-      <span class="text">Profile</span>
+      <span class="text">Profile</span></a>
   </div>
   <!--<div class="jigsaw3 grid">
       <span class="t"></span>
@@ -111,7 +110,6 @@
   <div class="jigsaw3 grid">
       <span class="t"></span>
       <span class="r"></span>
-      <span class="b"></span>
       <span class="l"></span>
       <span class="text">Friends</span>
   </div>
