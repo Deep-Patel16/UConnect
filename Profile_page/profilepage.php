@@ -160,43 +160,43 @@ $dropdown_statement ->close();
 
 
                     <select name = "choice1">
-                      <option value = "Sports" $drop1_array[0]>Sports</option>
-                      <option value = "Movies" $drop1_array[1]>Movies</option>
-                      <option value = "Books" $drop1_array[2]>Books</option>
-                      <option value = "Video Games" $drop1_array[3]>Video Games</option>
-                      <option value = "Music" $drop1_array[4]>Music</option>
-                      <option value = "Science" $drop1_array[5]>Science</option>
-                      <option value = "Art" $drop1_array[6]>Art</option>
-                      <option value = "Food" $drop1_array[7]>Food</option>
-                      <option value = "Fashion" $drop1_array[8]>Fashion</option>
-                      <option value = "Anime" $drop1_array[9]>Anime</option>
-                      <option value = "Computers" $drop1_array[10]>Computers</option>
+                      <option value = "Sports" <?php if ($drop1_array[0]=="selected") echo 'selected="selected"';?>>Sports</option>
+                      <option value = "Movies" <?php if ($drop1_array[1]=="selected") echo 'selected="selected"';?>>Movies</option>
+                      <option value = "Books" <?php if ($drop1_array[2]=="selected") echo 'selected="selected"';?>>Books</option>
+                      <option value = "Video Games" <?php if ($drop1_array[3]=="selected") echo 'selected="selected"';?>>Video Games</option>
+                      <option value = "Music" <?php if ($drop1_array[4]=="selected") echo 'selected="selected"';?>>Music</option>
+                      <option value = "Science" <?php if ($drop1_array[5]=="selected") echo 'selected="selected"';?>>Science</option>
+                      <option value = "Art" <?php if ($drop1_array[6]=="selected") echo 'selected="selected"';?>>Art</option>
+                      <option value = "Food" <?php if ($drop1_array[7]=="selected") echo 'selected="selected"';?>>Food</option>
+                      <option value = "Fashion" <?php if ($drop1_array[8]=="selected") echo 'selected="selected"';?>>Fashion</option>
+                      <option value = "Anime" <?php if ($drop1_array[9]=="selected") echo 'selected="selected"';?>>Anime</option>
+                      <option value = "Computers" <?php if ($drop1_array[10]=="selected") echo 'selected="selected"';?>>Computers</option>
                     </select>
                     <select name = "choice2">
-                      <option value = "Sports" $drop2_array[0]>Sports</option>
-                      <option value = "Movies" $drop2_array[1]>Movies</option>
-                      <option value = "Books" $drop2_array[2]>Books</option>
-                      <option value = "Video Games" $drop2_array[3]>Video Games</option>
-                      <option value = "Music" $drop2_array[4]>Music</option>
-                      <option value = "Science" $drop2_array[5]>Science</option>
-                      <option value = "Art" $drop2_array[6]>Art</option>
-                      <option value = "Food" $drop2_array[7]>Food</option>
-                      <option value = "Fashion" $drop2_array[8]>Fashion</option>
-                      <option value = "Anime" $drop2_array[9]>Anime</option>
-                      <option value = "Computers" $drop2_array[10]>Computers</option>
+                      <option value = "Sports" <?php if ($drop2_array[0]=="selected") echo 'selected="selected"';?>>Sports</option>
+                      <option value = "Movies" <?php if ($drop2_array[1]=="selected") echo 'selected="selected"';?>>Movies</option>
+                      <option value = "Books" <?php if ($drop2_array[2]=="selected") echo 'selected="selected"';?>>Books</option>
+                      <option value = "Video Games" <?php if ($drop2_array[3]=="selected") echo 'selected="selected"';?>>Video Games</option>
+                      <option value = "Music" <?php if ($drop2_array[4]=="selected") echo 'selected="selected"';?>>Music</option>
+                      <option value = "Science" <?php if ($drop2_array[5]=="selected") echo 'selected="selected"';?>>Science</option>
+                      <option value = "Art" <?php if ($drop2_array[6]=="selected") echo 'selected="selected"';?>>Art</option>
+                      <option value = "Food" <?php if ($drop2_array[7]=="selected") echo 'selected="selected"';?>>Food</option>
+                      <option value = "Fashion" <?php if ($drop2_array[8]=="selected") echo 'selected="selected"';?>>Fashion</option>
+                      <option value = "Anime" <?php if ($drop2_array[9]=="selected") echo 'selected="selected"';?>>Anime</option>
+                      <option value = "Computers" <?php if ($drop2_array[10]=="selected") echo 'selected="selected"';?>>Computers</option>
                     </select>
                     <select name = "choice3">
-                      <option value = "Sports" $drop3_array[0]>Sports</option>
-                      <option value = "Movies" $drop3_array[1]>Movies</option>
-                      <option value = "Books" $drop3_array[2]>Books</option>
-                      <option value = "Video Games" $drop3_array[3]>Video Games</option>
-                      <option value = "Music" $drop3_array[4]>Music</option>
-                      <option value = "Science" $drop3_array[5]>Science</option>
-                      <option value = "Art" $drop3_array[6]>Art</option>
-                      <option value = "Food" $drop3_array[7]>Food</option>
-                      <option value = "Fashion" $drop3_array[8]>Fashion</option>
-                      <option value = "Anime" $drop3_array[9]>Anime</option>
-                      <option value = "Computers" $drop3_array[10]>Computers</option>
+                      <option value = "Sports" <?php if ($drop3_array[0]=="selected") echo 'selected="selected"';?>>Sports</option>
+                      <option value = "Movies" <?php if ($drop3_array[1]=="selected") echo 'selected="selected"';?>>Movies</option>
+                      <option value = "Books" <?php if ($drop3_array[2]=="selected") echo 'selected="selected"';?>>Books</option>
+                      <option value = "Video Games" <?php if ($drop3_array[3]=="selected") echo 'selected="selected"';?>>Video Games</option>
+                      <option value = "Music" <?php if ($drop3_array[4]=="selected") echo 'selected="selected"';?>>Music</option>
+                      <option value = "Science" <?php if ($drop3_array[5]=="selected") echo 'selected="selected"';?>>Science</option>
+                      <option value = "Art" <?php if ($drop3_array[6]=="selected") echo 'selected="selected"';?>>Art</option>
+                      <option value = "Food" <?php if ($drop3_array[7]=="selected") echo 'selected="selected"';?>>Food</option>
+                      <option value = "Fashion" <?php if ($drop3_array[8]=="selected") echo 'selected="selected"';?>>Fashion</option>
+                      <option value = "Anime" <?php if ($drop3_array[9]=="selected") echo 'selected="selected"';?>>Anime</option>
+                      <option value = "Computers" <?php if ($drop3_array[10]=="selected") echo 'selected="selected"';?>>Computers</option>
                     </select>
 
 
