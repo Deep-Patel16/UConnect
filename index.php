@@ -1,4 +1,4 @@
 <?php
-header('Location: Login_page/modal.html');
+header('Location: Login_page/index.html');
 
  ?>
