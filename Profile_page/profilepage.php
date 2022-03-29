@@ -55,6 +55,15 @@ if (is_null($drop_array)){
 $dropdown_statement ->close();
 //word_bits_statement
 
+$word_statement=$mysqli->prepare("SELECT id,Forename,Surname,Course FROM Users WHERE id=?");
+$word_statement->bind_param("s", $id_var);
+$word_statement->execute();
+$word_result = $word_statement->get_result();
+$word_array = $word_result->fetch_array();
+$word_statement->close();
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -144,11 +153,11 @@ $dropdown_statement ->close();
                 </div>
 
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name"  name="forename" /></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"  placeholder="Surname" name="surname" /></div>
+                    <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name"  name="forename" value = $word_array[1] /></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"  placeholder="Surname" name="surname" value = $word_array[2] /></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" value="" name="course"></div>
+                    <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" value=$word_array[3] name="course"></div>
 
 
                 </div>
