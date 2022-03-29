@@ -87,7 +87,7 @@
       </div>
 
     </div>
-  </div>
+  
 
 </header>
 </div>
@@ -110,7 +110,7 @@
   <div class="jigsaw3 grid">
       <span class="t"></span>
       <span class="r"></span>
-      <span class="l"></span>
+      <span class="b"></span>
       <span class="text">Friends</span>
   </div>
   <!--
