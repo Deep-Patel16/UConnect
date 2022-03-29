@@ -214,11 +214,11 @@ $stmt->close();
                         </div>
 
                         <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name"  name="forename" value = <?php echo($word_array[1])?> /></div>
-                            <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"  placeholder="Surname" name="surname" value = <?php echo($word_array[2])?> /></div>
+                            <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name"  name="forename" value = <?php echo($word_array[1]);?> /></div>
+                            <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"  placeholder="Surname" name="surname" value = <?php echo($word_array[2]);?> /></div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" value= <?php echo($word_array[3])?> name="course"></div>
+                            <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" name="course" value=<?php echo($word_array[3]);?> /></div>
 
 
                         </div>

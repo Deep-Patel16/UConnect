@@ -2,7 +2,7 @@
 
 session_start();
 
-header('Location: profilepage.php');
+header('Location: profile.php');
 
 $id_var = $_SESSION['id'];
 
