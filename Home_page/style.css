@@ -94,8 +94,9 @@ body {
 }
 .jigsaw1, .jigsaw2, .jigsaw3,.jigsaw4{
   /* width: 48vh;
-  height: 48vh; */
+   */
   /* margin: 15px; */
+	height: 100%;
   position: relative;
   -webkit-border-radius: 5%;
   -moz-border-radius: 5%;
