@@ -22,7 +22,7 @@ $drop_array = $dropdown_result->fetch_array();
 $drop1_array = array(null,null,null,null,null,null,null,null,null,null,null);
 $drop2_array = array(null,null,null,null,null,null,null,null,null,null,null);
 $drop3_array = array(null,null,null,null,null,null,null,null,null,null,null);
-if (is_null($drop_array[0])){
+if (is_null($drop_array)){
 
 } else {
 
