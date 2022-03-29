@@ -14,7 +14,7 @@ $dropdown_statement=$mysqli->prepare("SELECT id,Sports,Movies,Books,VideoGames,M
 $dropdown_statement->bind_param("s", $id_var);
 $dropdown_statement->execute();
 $dropdown_statement->bind_result($drop);
-if (is_null($is_id)){
+if (is_null($drop)){
   $drop1_array = array(null,null,null,null,null,null,null,null,null,null,null);
   $drop2_array = array(null,null,null,null,null,null,null,null,null,null,null);
   $drop3_array = array(null,null,null,null,null,null,null,null,null,null,null);
