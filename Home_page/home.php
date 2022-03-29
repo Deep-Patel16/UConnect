@@ -53,7 +53,6 @@
 <!-- Style -->
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="styleshhet" href="style.css">
 <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <link rel="shortcut icon" type="image/x-icon" href="logo.jpg" />
@@ -91,7 +90,7 @@
 
 </div>
 </header>
-
+</div>
 <div class="puzzles">
 
   <div class="jigsaw1 grid">
