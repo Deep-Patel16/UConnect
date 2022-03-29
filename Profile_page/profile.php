@@ -74,6 +74,15 @@ $user_img = base64_encode($result);
 
 $stmt->close();
 
+
+$social_statement=$mysqli->prepare("SELECT id,Facebook,Instagram,Snapchat FROM Users WHERE id=?");
+$social_statement->bind_param("s", $id_var);
+$social_statement->execute();
+$social_result = $social_statement->get_result();
+$social_array = $social_result->fetch_array();
+$social_statement->close();
+
+
 ?>
 
 <!-- <div class="card-image"> <img src="data:png;base64, ' . $img . '" alt=""> </div> -->
@@ -293,9 +302,10 @@ $stmt->close();
                 <div class="col-md-4">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center experience"><span>Social Media Profiles</span></div><br>
-                        <div class="col-md-12"><label class="labels"><img src="instagram_logo.png" alt="Instagram Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Instagram Link" value="" name="instagram"></div><br>
-                        <div class="col-md-12"><label class="labels"><img src="snapchaticon.png" alt="Snapchat Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="SnapChat Link" value="" name="snapchat"></div><br>
-                        <div class="col-md-12"><label class="labels"><img src="facebooklogo.png" alt="Facebook Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Facebook Link" value="" name="facebook"></div><br>
+                        <div class="col-md-12"><label class="labels"><img src="facebooklogo.png" alt="Facebook Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Facebook Link" value="" name="facebook" value=<?php echo($social_array[1]);?>></div><br>
+                        <div class="col-md-12"><label class="labels"><img src="instagram_logo.png" alt="Instagram Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Instagram Link" value="" name="instagram" value=<?php echo($social_array[2]);?>></div><br>
+                        <div class="col-md-12"><label class="labels"><img src="snapchaticon.png" alt="Snapchat Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="SnapChat Link" value="" name="snapchat" value=<?php echo($social_array[3]);?>></div><br>
+
                     </div>
                 </div>
 
