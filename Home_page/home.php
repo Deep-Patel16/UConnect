@@ -18,6 +18,7 @@
  $stmt->execute();
  $stmt->bind_result($value);
  $stmt->fetch();
+ $stmt->close();
  ?>
 
 <!DOCTYPE html>
