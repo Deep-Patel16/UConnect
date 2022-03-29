@@ -65,10 +65,10 @@
               <nav class="site-navigation position-relative text-right" role="navigation">
 
                 <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block" >
-                  <li><a href="#"><span style="color:purple";>HomePage</span></a></li>
-                  <li><a href="#"><span style="color:purple";>Profile</span></a></li>
+                  <li><a href="../Home_page/index.php"><span style="color:purple";>HomePage</span></a></li>
+                  <li><a href="../Profile_page/profilepage.php"><span style="color:purple";>Profile</span></a></li>
                   <li><a href="#"><span style="color:purple";>Notifications</span></a></li>
-                  <li ><a href="#"><span style="color:purple";>LogOut</span></a></li>
+                  <li ><a href="../Login_page/modal.html"><span style="color:purple";>LogOut</span></a></li>
                 </ul>
               </nav>
             </div>
@@ -109,7 +109,7 @@
             </div> -->
 
 
-            
+
 
           </div>
           <div class="py-5 text-right"><a href="#" class="btn btn-dark px-5 py-3 text-uppercase">Show me more</a></div>
@@ -127,14 +127,14 @@
           <div class="modal-body">
       <ul>
       <li>UConnect's services provide users with a platform to find and make new friends. The use of this service</li>
-      <li>requires users details such as contact details, log-in credentails as well as account holder information.</li>
+      <li>requires the user's details such as contact details, log-in credentials as well as account holder information.</li>
       <li>UConnect's use of your personal data:</li>
       <ul>
         <li>Using your information to provide services to match your account with others to find friends</li>
-        <li>Contact your regarding your account or changes with our service</li>
-        <li>Prevent misuse of our service and to review users content</li>
+        <li>Contact you regarding your account or changes with our service</li>
+        <li>Prevent misuse of our service and to review users' content</li>
         <li>Displaying information users have authorised to other users to make friends</li>
-        <li>Use data to improve and enchace our services</li>
+        <li>Use data to improve and enhance our services</li>
         <li>Personal information will not be retained for longer than is necessary and will also be used to verify users via university emails.</li>
       </ul>
       <li>UConnect will not share your data with third parties unless otherwise specified and consented to.</li>
@@ -176,7 +176,7 @@
         <div class="row justify-content-center">
           <div class="col-md-9 text-center">
             <div class="footer-site-logo mb-4">
-              <a href="#">UCONECT</a>
+              <a href="#">UCONNECT</a>
             </div>
             <ul class="list-unstyled nav-links mb-5">
               <li><a href="#">About</a></li>
