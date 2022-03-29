@@ -17,14 +17,15 @@ $dropdown_statement=$mysqli->prepare("SELECT id,Sports,Movies,Books,VideoGames,M
 $dropdown_statement->bind_param("s", $id_var);
 $dropdown_statement->execute();
 $dropdown_result = $dropdown_statement->get_result();
+$drop_array = $dropdown_result->fetch_array();
 //$dropdown_statement->bind_result($drop);
 $drop1_array = array(null,null,null,null,null,null,null,null,null,null,null);
 $drop2_array = array(null,null,null,null,null,null,null,null,null,null,null);
 $drop3_array = array(null,null,null,null,null,null,null,null,null,null,null);
-if (is_null($dropdown_result)){
+if (is_null($drop_array[0])){
 
 } else {
-  $drop_array = $dropdown_result->fetch_array();
+
 
   //imma just assume that worked perfectly and $drop_array is now an array of the contents of the users intres row or null if the user hasnt filled it in yet
 
