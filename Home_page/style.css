@@ -192,7 +192,7 @@ body {
     padding-top: 2%;
     display:grid;
     grid-template-columns: 35% 35%;
-    grid-template-rows: 125% 125%;
+    grid-template-rows: 200% 200%;
     grid-gap: 5px;
 }
 .jigsaw1, .jigsaw2, .jigsaw3,.jigsaw4{
