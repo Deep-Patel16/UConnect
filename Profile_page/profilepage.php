@@ -9,6 +9,7 @@ $mysqli = new mysqli($database_host, $database_user, $database_pass, $group_dbna
 $_SESSION['sqli'] = $mysqli;
 if($mysqli -> connect_error) {
     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
+}
 
 $dropdown_statement=$mysqli->prepare("SELECT id,Sports,Movies,Books,VideoGames,Music,Science,Art,Food,Fashion,Anime,Computers FROM Interests WHERE id=?");
 $dropdown_statement->bind_param("s", $id_var);
