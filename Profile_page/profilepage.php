@@ -2,6 +2,8 @@
 session_start();
 
 // getting data needed to display the stored data in the dropdowns
+
+require_once('../config.inc.php');
 $id_var = $_SESSION['id'];
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
