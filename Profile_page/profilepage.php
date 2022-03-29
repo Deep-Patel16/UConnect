@@ -18,7 +18,7 @@ $drop1_array = array(null,null,null,null,null,null,null,null,null,null,null);
 $drop2_array = array(null,null,null,null,null,null,null,null,null,null,null);
 $drop3_array = array(null,null,null,null,null,null,null,null,null,null,null)
 if (is_null($drop)){
-  
+
 } else {
   $drop_array = $drop ->fetch_array();
 
@@ -28,7 +28,7 @@ if (is_null($drop)){
 
 
   for ($iter = 1; $iter <= 11; $iter++) {
-    switch $drop_array[$iter]{
+    switch ($drop_array[$iter]){
       case 0:
         break;
       case 1:
