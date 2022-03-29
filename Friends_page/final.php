@@ -111,7 +111,7 @@
 
 
           </div>
-          <div class="py-5 text-right"><a href="#" class="btn btn-dark px-5 py-3 text-uppercase">Show me more</a></div>
+
         </div>
       </div>
     </div>
@@ -125,8 +125,8 @@
           </div>
           <div class="modal-body">
       <ul>
-      <li>UConnect's services provide users with a platform to find and make new friends. The use of this service</li>
-      <li>requires the user's details such as contact details, log-in credentials as well as account holder information.</li>
+      <li>UConnect's services provide users with a platform to find and make new friends. The use of this service
+      requires the user's details such as contact details, log-in credentials as well as account holder information.</li>
       <li>UConnect's use of your personal data:</li>
       <ul>
         <li>Using your information to provide services to match your account with others to find friends</li>
