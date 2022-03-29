@@ -87,7 +87,7 @@
       </div>
 
     </div>
-  
+
 
 </header>
 </div>
@@ -97,23 +97,25 @@
     <a href="../Profile_page/profile.php">
       <span class="t"></span>
       <span class="r"></span>
+      <span class="b"></span>
       <span class="l"></span>
       <span class="text">Profile</span></a>
   </div>
-  <!--<div class="jigsaw3 grid">
+  <div class="jigsaw3 grid">
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
       <span class="l"></span>
       <span class="text">Notifications</span>
-  </div>-->
-  <div class="jigsaw3 grid">
+  </div>
+  <div class="jigsaw2 grid">
       <span class="t"></span>
       <span class="r"></span>
       <span class="b"></span>
+      <span class="l"></span>
       <span class="text">Friends</span>
   </div>
-  <!--
+
   <div class="jigsaw4 grid">
       <span class="t"></span>
       <span class="r"></span>
@@ -121,7 +123,7 @@
       <span class="l"></span>
       <span class="text">Settings</span>
   </div>
--->
+
 </div>
 <?php
 for ($x = 0; $x < 21; $x++) {
