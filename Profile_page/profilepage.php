@@ -52,7 +52,7 @@ if (is_null($dropdown_result)){
   }
 }
 $dropdown_statement ->close();
-word_bits_statement
+//word_bits_statement
 
 ?>
 
