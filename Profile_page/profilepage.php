@@ -1,5 +1,56 @@
 <?php
 session_start();
+
+// getting data needed to display the stored data in the dropdowns
+$id_var = $_SESSION['id'];
+
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$mysqli = new mysqli($database_host, $database_user, $database_pass, $group_dbnames[0]);
+$_SESSION['sqli'] = $mysqli;
+if($mysqli -> connect_error) {
+    die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
+
+$dropdown_statement=$mysqli->prepare("SELECT id,Sports,Movies,Books,VideoGames,Music,Science,Art,Food,Fashion,Anime,Computers FROM Interests WHERE id=?");
+$dropdown_statement->bind_param("s", $id_var);
+$dropdown_statement->execute();
+$dropdown_statement->bind_result($drop);
+if (is_null($is_id)){
+  $drop1_array = array(null,null,null,null,null,null,null,null,null,null,null)
+  $drop2_array = array(null,null,null,null,null,null,null,null,null,null,null)
+  $drop3_array = array(null,null,null,null,null,null,null,null,null,null,null)
+} else {
+  $drop_array = $drop ->fetch_array();
+
+  //imma just assume that worked perfectly and $drop_array is now an array of the contents of the users intres row or null if the user hasnt filled it in yet
+
+  // right so this bit takes the row an reads through it and updates the array for the dropdown to say this is the boi previously selected
+  $drop1_array = array(null,null,null,null,null,null,null,null,null,null,null)
+  $drop2_array = array(null,null,null,null,null,null,null,null,null,null,null)
+  $drop3_array = array(null,null,null,null,null,null,null,null,null,null,null)
+
+  for ($iter = 1; $iter <= 11; $iter++) {
+    switch $drop_array[$iter]{
+      case 0:
+        break;
+      case 1:
+        $drop3_array[$iter-1]="selected";
+        break;
+      case 2:
+        $drop2_array[$iter-1]="selected";
+        break;
+      case 3:
+        $drop1_array[$iter-1]="selected";
+        break;
+      default:
+        break;
+
+
+    }
+  }
+}
+$dropdown_statement ->close();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -106,43 +157,43 @@ session_start();
 
 
                     <select name = "choice1">
-                      <option value = "Sports">Sports</option>
-                      <option value = "Movies">Movies</option>
-                      <option value = "Books">Books</option>
-                      <option value = "Video Games">Video Games</option>
-                      <option value = "Music">Music</option>
-                      <option value = "Science">Science</option>
-                      <option value = "Art">Art</option>
-                      <option value = "Food">Food</option>
-                      <option value = "Fashion">Fashion</option>
-                      <option value = "Anime">Anime</option>
-                      <option value = "Computers">Computers</option>
+                      <option value = "Sports" $drop1_array[0]>Sports</option>
+                      <option value = "Movies" $drop1_array[1]>Movies</option>
+                      <option value = "Books" $drop1_array[2]>Books</option>
+                      <option value = "Video Games" $drop1_array[3]>Video Games</option>
+                      <option value = "Music" $drop1_array[4]>Music</option>
+                      <option value = "Science" $drop1_array[5]>Science</option>
+                      <option value = "Art" $drop1_array[6]>Art</option>
+                      <option value = "Food" $drop1_array[7]>Food</option>
+                      <option value = "Fashion" $drop1_array[8]>Fashion</option>
+                      <option value = "Anime" $drop1_array[9]>Anime</option>
+                      <option value = "Computers" $drop1_array[10]>Computers</option>
                     </select>
                     <select name = "choice2">
-                      <option value = "Sports">Sports</option>
-                      <option value = "Movies">Movies</option>
-                      <option value = "Books">Books</option>
-                      <option value = "Video Games">Video Games</option>
-                      <option value = "Music">Music</option>
-                      <option value = "Science">Science</option>
-                      <option value = "Art">Art</option>
-                      <option value = "Food">Food</option>
-                      <option value = "Fashion">Fashion</option>
-                      <option value = "Anime">Anime</option>
-                      <option value = "Computers">Computers</option>
+                      <option value = "Sports" $drop2_array[0]>Sports</option>
+                      <option value = "Movies" $drop2_array[1]>Movies</option>
+                      <option value = "Books" $drop2_array[2]>Books</option>
+                      <option value = "Video Games" $drop2_array[3]>Video Games</option>
+                      <option value = "Music" $drop2_array[4]>Music</option>
+                      <option value = "Science" $drop2_array[5]>Science</option>
+                      <option value = "Art" $drop2_array[6]>Art</option>
+                      <option value = "Food" $drop2_array[7]>Food</option>
+                      <option value = "Fashion" $drop2_array[8]>Fashion</option>
+                      <option value = "Anime" $drop2_array[9]>Anime</option>
+                      <option value = "Computers" $drop2_array[10]>Computers</option>
                     </select>
                     <select name = "choice3">
-                      <option value = "Sports">Sports</option>
-                      <option value = "Movies">Movies</option>
-                      <option value = "Books">Books</option>
-                      <option value = "Video Games">Video Games</option>
-                      <option value = "Music">Music</option>
-                      <option value = "Science">Science</option>
-                      <option value = "Art">Art</option>
-                      <option value = "Food">Food</option>
-                      <option value = "Fashion">Fashion</option>
-                      <option value = "Anime">Anime</option>
-                      <option value = "Computers">Computers</option>
+                      <option value = "Sports" $drop3_array[0]>Sports</option>
+                      <option value = "Movies" $drop3_array[1]>Movies</option>
+                      <option value = "Books" $drop3_array[2]>Books</option>
+                      <option value = "Video Games" $drop3_array[3]>Video Games</option>
+                      <option value = "Music" $drop3_array[4]>Music</option>
+                      <option value = "Science" $drop3_array[5]>Science</option>
+                      <option value = "Art" $drop3_array[6]>Art</option>
+                      <option value = "Food" $drop3_array[7]>Food</option>
+                      <option value = "Fashion" $drop3_array[8]>Fashion</option>
+                      <option value = "Anime" $drop3_array[9]>Anime</option>
+                      <option value = "Computers" $drop3_array[10]>Computers</option>
                     </select>
 
 
