@@ -24,7 +24,7 @@ session_start();
 
 
 	if ((is_null($value)) || ($value != hash('sha256',$password))) {
-		header('Location: modal.html');
+		header('Location: index.html');
 		echo("Incorrect password");
 	} else {
 		header('Location: ../Home_page/index.php');
