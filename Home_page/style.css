@@ -53,12 +53,12 @@ body {
 
 .jigsaw1,
 .jigsaw1 span {
- background-color: #0284cf; 
+ background-color: #0284cf;
 }
 
 .jigsaw2,
 .jigsaw2 span {
- background-color: #0909a3; 
+ background-color: #0909a3;
 }
 
 .jigsaw3,
@@ -66,7 +66,7 @@ body {
     background-color: #15b5e6;
 }
 
-.jigsaw4, 
+.jigsaw4,
 .jigsaw4 span {
     background-color: #ff38ff;
 }
@@ -104,12 +104,12 @@ body {
 
 .jigsaw1,
 .jigsaw1 span {
- background-color: #0284cf; 
+ background-color: #0284cf;
 }
 
 .jigsaw2,
 .jigsaw2 span {
- background-color: #0909a3; 
+ background-color: #0909a3;
 }
 
 .jigsaw3,
@@ -117,7 +117,7 @@ body {
     background-color: #15b5e6;
 }
 
-.jigsaw4, 
+.jigsaw4,
 .jigsaw4 span {
     background-color: #ff38ff;
 }
@@ -144,7 +144,7 @@ body {
 }
 .jigsaw1, .jigsaw2, .jigsaw3,.jigsaw4{
   /* width: 48vh;
-  height: 48vh;  
+  height: 48vh;
   margin: 15px; */
   position: relative;
   -webkit-border-radius: 5%;
@@ -155,12 +155,12 @@ body {
 
 .jigsaw1,
 .jigsaw1 span {
- background-color: #0284cf; 
+ background-color: #0284cf;
 }
 
 .jigsaw2,
 .jigsaw2 span {
- background-color: #0909a3; 
+ background-color: #0909a3;
 }
 
 .jigsaw3,
@@ -168,7 +168,7 @@ body {
     background-color: #15b5e6;
 }
 
-.jigsaw4, 
+.jigsaw4,
 .jigsaw4 span {
     background-color: #ff38ff;
 }
@@ -205,12 +205,12 @@ body {
 
 .jigsaw1,
 .jigsaw1 span {
- background-color: #0284cf; 
+ background-color: #0284cf;
 }
 
 .jigsaw2,
 .jigsaw2 span {
- background-color: #0909a3; 
+ background-color: #0909a3;
 }
 
 .jigsaw3,
@@ -218,7 +218,7 @@ body {
     background-color: #15b5e6;
 }
 
-.jigsaw4, 
+.jigsaw4,
 .jigsaw4 span {
     background-color: #ff38ff;
 }
@@ -234,7 +234,7 @@ body {
 }
 }
 
-  
+
   .jigsaw1 .t{
     width: 25%;
     height: 25%;
@@ -269,7 +269,7 @@ body {
     -moz-border-radius: 40%;
     border-radius: 40%;
   }
-  
+
   .jigsaw2 .t{
     width: 25%;
     height: 25%;
@@ -281,7 +281,7 @@ body {
     border-radius: 40%;
     background-color: #fff;
   }
-  
+
   .jigsaw3 .l{
     width: 25%;
     height: 25%;
@@ -303,7 +303,7 @@ body {
     -webkit-border-radius: 40%;
     -moz-border-radius: 40%;
     border-radius: 40%;
-    
+
     }
 
   .jigsaw4 .l{
@@ -314,7 +314,7 @@ body {
     left: 40%;
     -webkit-border-radius: 40%;
     -moz-border-radius: 40%;
-    border-radius: 40%;    
+    border-radius: 40%;
   }
 
   .jigsaw4 .r{
@@ -325,7 +325,7 @@ body {
     right: 92%;
     -webkit-border-radius: 40%;
     -moz-border-radius: 40%;
-    border-radius: 40%;     
+    border-radius: 40%;
   }
 
 .jigsaw1,.jigsaw2,.jigsaw3,.jigsaw4 {
@@ -374,7 +374,7 @@ body {
   background: #009bd5;
 }
 .header1{
-  background: white;
+  background-color: white;
 }
 
 .footer-1637 {
