@@ -66,7 +66,7 @@
                 <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block" >
                   <li><a href="../Home_page/index.html"><span style="color:purple">HomePage</span></a></li>
                   <li><a href="../Profile_page/profile.php"><span style="color:purple">Profile</span></a></li>
-                  <li><span style="color:purple">Notifications</span></li>
+                  
                   <li><a href="../Login_page/index.html"><span style="color:purple">LogOut</span></a></li>
                 </ul>
               </nav>
