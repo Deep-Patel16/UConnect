@@ -1,25 +1,4 @@
-<?php
-  session_start();
- ?>
 
- <?php
- $id_var=$_SESSION['id'];
- require_once('../config.inc.php');
-
- mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
- $mysqli = new mysqli($database_host, $database_user, $database_pass, $group_dbnames[0]);
- $_SESSION['sqli'] = $mysqli;
- if($mysqli -> connect_error) {
-     die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
- }
-
- $stmt = $_SESSION['sqli']->prepare("SELECT username FROM Users WHERE id=?");
- $stmt->bind_param('s', $id_var);
- $stmt->execute();
- $stmt->bind_result($value);
- $stmt->fetch();
- $stmt->close();
- ?>
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -76,7 +55,7 @@
         <nav class="site-navigation position-relative text-right" role="navigation">
 
           <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block" >
-            <li><a href="../Profile_page/profile.php"><span style="color:purple";><?php echo $value; ?></span></a></li>
+            <li><a href="../Profile_page/profile.php"><span style="color:purple";>Profile</span></a></li>
             <li ><a href="../Login_page/index.html"><span style="color:purple";>LogOut</span></a></li>
           </ul>
         </nav>
