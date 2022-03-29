@@ -107,7 +107,7 @@ word_bits_statement
   overflow:auto;
 }
 
-}</style>
+</style>
 </head>
 <body oncontextmenu='return false' class='snippet-body'>
     <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
