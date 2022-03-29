@@ -25,7 +25,7 @@ $surname = $_POST['surname'];
 $course = $_POST['course'];
 
 $choices = array($choice1, $choice2, $choice3);
-$details = array("Forename"=>$forename, "Surname"=>$surname, "Course"=>$course);
+$details = array("Forename"=>$forename, "Surname"=>$surname, "Course"=>$course, "Facebook"=>$_POST['facebook'], "Instagram"=>$_POST['instagram'], "Snapchat"=>$_POST['snapchat']);
 
 $values_to_add = array(0,0,0,0,0,0,0,0,0,0,0);
 

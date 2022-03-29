@@ -293,9 +293,9 @@ $stmt->close();
                 <div class="col-md-4">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center experience"><span>Social Media Profiles</span></div><br>
-                        <div class="col-md-12"><label class="labels"><img src="instagram_logo.png" alt="Instagram Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Instagram Link" value=""></div> <br>
-                        <div class="col-md-12"><label class="labels"><img src="snapchaticon.png" alt="Snapchat Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="SnapChat Link" value=""></div><br>
-                        <div class="col-md-12"><label class="labels"><img src="facebooklogo.png" alt="Facebook Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Facebook Link" value=""></div><br>
+                        <div class="col-md-12"><label class="labels"><img src="instagram_logo.png" alt="Instagram Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Instagram Link" value="" name="instagram"></div><br>
+                        <div class="col-md-12"><label class="labels"><img src="snapchaticon.png" alt="Snapchat Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="SnapChat Link" value="" name="snapchat"></div><br>
+                        <div class="col-md-12"><label class="labels"><img src="facebooklogo.png" alt="Facebook Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Facebook Link" value="" name="facebook"></div><br>
                     </div>
                 </div>
 
