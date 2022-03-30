@@ -227,11 +227,11 @@ $social_statement->close();
                         </div>
 
                         <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name"  name="forename" value = <?php if(is_null($word_array[1]) ? echo("") : echo($word_array[1]);?> /></div>
-                            <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"  placeholder="Surname" name="surname" value = <?php if(is_null($word_array[2]) ? echo("") : echo($word_array[2]);?> /></div>
+                            <div class="col-md-6"><label class="labels">Forename</label><input type="text" class="form-control" placeholder="First name"  name="forename" value = <?php echo($word_array[1]);?> /></div>
+                            <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"  placeholder="Surname" name="surname" value = <?php echo($word_array[2]);?> /></div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" name="course" value=<?php if(is_null($word_array[3]) ? echo("") : echo($word_array[3]);?> /></div>
+                            <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Enter your course" name="course" value=<?php echo($word_array[3]);?> /></div>
 
 
                         </div>
@@ -302,9 +302,9 @@ $social_statement->close();
                 <div class="col-md-4">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center experience"><span>Social Media Profiles</span></div><br>
-                        <div class="col-md-12"><label class="labels"><img src="facebooklogo.png" alt="Facebook Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Facebook Link" name="facebook" value=<?php if(is_null($social_array[1]) ? echo("") : echo($social_array[1]);?> /> </div><br>
-                        <div class="col-md-12"><label class="labels"><img src="instagram_logo.png" alt="Instagram Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Instagram Link" name="instagram" value=<?php if(is_null($social_array[2]) ? echo("") : echo($social_array[2]);?> /> </div><br>
-                        <div class="col-md-12"><label class="labels"><img src="snapchaticon.png" alt="Snapchat Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="SnapChat Link" name="snapchat" value=<?php if(is_null($social_array[3]) ? echo("") : echo($social_array[3]);?> /> </div><br>
+                        <div class="col-md-12"><label class="labels"><img src="facebooklogo.png" alt="Facebook Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Facebook Link" name="facebook" value=<?php echo($social_array[1]);?> /> </div><br>
+                        <div class="col-md-12"><label class="labels"><img src="instagram_logo.png" alt="Instagram Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Instagram Link" name="instagram" value=<?php echo($social_array[2]);?> /> </div><br>
+                        <div class="col-md-12"><label class="labels"><img src="snapchaticon.png" alt="Snapchat Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="SnapChat Link" name="snapchat" value=<?php echo($social_array[3]);?> /> </div><br>
 
                     </div>
                 </div>
