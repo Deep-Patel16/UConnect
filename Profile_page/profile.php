@@ -86,7 +86,7 @@ for ($x = 1; $x < 4; $x++) {
   if (is_null($social_array[$x])) {
     $social_array[$x] = "";
   }
-  if (is_null($word_array[$x)) {
+  if (is_null($word_array[$x])) {
     $word_array[$x] = "";
   }
 }
