@@ -502,7 +502,6 @@ for ($x = 1; $x < 4; $x++) {
     <script type='text/javascript'>
     function hideOld() {
       document.getElementsByClassName('img-to-hide')[0].style.display = 'none';
-      alert("Woop");
     }
     </script>
     <script type='text/javascript' src=''></script>
