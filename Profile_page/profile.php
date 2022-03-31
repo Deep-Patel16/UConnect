@@ -224,7 +224,7 @@ for ($x = 1; $x < 4; $x++) {
                 <div class="col-md-3 border-right">
                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                     <div id="display_image"></div>
-                    <?php echo("<img src='data:png;base64, '" . $user_img . " alt=''> </div>");?>
+                    <?php echo("<img src='data:png;base64, " . $user_img . "' alt=''> </div>");?>
                     <input type="file" accept="image/*,.png"id="image_input" name="image_input" hidden/>
                     <label for="image_input" id="image_input1">Choose file</label>
                 </div>
