@@ -227,7 +227,7 @@ $stmt->close();
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center experience"><span>Social Media Profiles</span></div><br>
                 <div class="col-md-12"><label class="labels"><img src="instagram_logo.png" alt="Instagram Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Instagram Link" value=""></div> <br>
-                <div class="col-md-12"><label class="labels"><img src="twittericon.png" alt="Twitter Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="SnapChat Link" value=""></div><br>
+                <div class="col-md-12"><label class="labels"><img src="twittericon.png" alt="Twitter Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Twitter Link" value=""></div><br>
                 <div class="col-md-12"><label class="labels"><img src="facebooklogo.png" alt="Facebook Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Facebook Link" value=""></div><br>
                 <div class="col-md-12"><label class="labels"><img src="linkedin.png" alt="Linkedin Logo" width="40" height="40"><br></label><input type="text" class="form-control" placeholder="Linkedin Link" value=""></div><br>
             </div>
