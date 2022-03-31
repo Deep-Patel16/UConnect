@@ -76,7 +76,6 @@ body {
     border-radius: 50%;
     background-position: center;
     background-size: cover;
-		z-index:1;
 
   }
 #image_input1{
@@ -88,5 +87,4 @@ body {
     border-radius: 0.3rem;
     cursor: pointer;
     margin-top: 1rem;
-		z-index:2;
   }
