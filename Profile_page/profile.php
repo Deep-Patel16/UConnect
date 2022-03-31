@@ -224,8 +224,8 @@ for ($x = 1; $x < 4; $x++) {
                 <div class="col-md-3 border-right">
                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
 
-                    <div id="display_image"><?php echo("<img id='display_image' src='data:png;base64, " . $user_img . "' alt=''>");?></div>
-                    <input type="file" accept="image/*,.png"id="image_input" name="image_input" hidden>
+                    <div id="display_image"><?php echo("<img id='display_image' class='img-to-hide' src='data:png;base64, " . $user_img . "' alt=''>");?></div>
+                    <input type="file" accept="image/*,.png"id="image_input" name="image_input" onchange="hideOld()" hidden>
 
 
                     <label for="image_input" id="image_input1">Choose file</label>
@@ -499,7 +499,11 @@ for ($x = 1; $x < 4; $x++) {
 
     <script  src="./profilepage.js"></script>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>
-    <script type='text/javascript' src=''></script>
+    <script type='text/javascript'>
+    function hideOld() {
+      document.getElementByClass('img-to-hide').style.display = none;
+    }
+    </script>
     <script type='text/javascript' src=''></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
