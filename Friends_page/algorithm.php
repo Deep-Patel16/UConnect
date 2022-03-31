@@ -148,8 +148,8 @@ $stmt->close();
        <div class="card p-0">
            <div class="card-image"> <img src="data:png;base64, ' . $img . '" alt=""> </div>
            <div class="card-content d-flex flex-column align-items-center">
-               <h4 class="pt-2">'. $fname . ' ' . $sname . ' </h4>
-               <h5>Course: '. $course . '<br>Likes: '. $choice1 .', '. $choice2 .', '. $choice3 .'</h5>
+               <h4 class="pt-2" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">'. $fname . ' ' . $sname . ' </h4>
+               <h5 style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Course: '. $course . '<br>Likes: '. $choice1 .', '. $choice2 .', '. $choice3 .'</h5>
                <ul class="social-icons d-flex justify-content-center">
                    <li style="--i:1"> <a href='. $fb .'> <span class="fab fa-facebook"></span> </a> </li>
                    <li style="--i:3"> <a href='. $igm .'> <span class="fab fa-instagram"></span> </a> </li>
