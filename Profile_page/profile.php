@@ -191,10 +191,10 @@ for ($x = 1; $x < 4; $x++) {
             <div class="row align-items-center">
 
               <div class="col-11 col-xl-2">
-                <a class="navbar-brand " href="#">
+                
                   <img src="logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
                   UCONNECT
-                </a>
+
               </div>
               <div class="col-12 col-md-10 d-none d-xl-block">
                 <nav class="site-navigation position-relative text-right" role="navigation">
