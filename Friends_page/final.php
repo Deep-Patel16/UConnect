@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -195,8 +194,8 @@
             <div class="social mb-4">
               <h3>Stay in touch</h3>
               <ul class="list-unstyled">
-                <li class="in"><a href="#"><span class="icon-instagram"></span></a></li>
-                <li class="fb"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="in"><a href="https://www.instagram.com/uconnect_official_uom/?hl=en"><span class="icon-instagram"></span></a></li>
+                <li class="fb"><a href="https://www.facebook.com/profile.php?id=100080029271917"><span class="icon-facebook"></span></a></li>
               </ul>
             </div>
 
