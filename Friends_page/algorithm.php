@@ -153,7 +153,7 @@ $stmt->close();
                <ul class="social-icons d-flex justify-content-center">
                    <li style="--i:1"> <a href='. $fb .'> <span class="fab fa-facebook"></span> </a> </li>
                    <li style="--i:3"> <a href='. $igm .'> <span class="fab fa-instagram"></span> </a> </li>
-                   <li style="--i:4"> <a href='. $sc .'> <span class="fab fa-snapchat"></span> </a> </li>
+                   <li style="--i:4"> <a href='. $sc .'> <span class="fab fa-twitter"></span> </a> </li>
                </ul>
            </div>
        </div>
