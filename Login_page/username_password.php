@@ -27,15 +27,28 @@ $email_check = explode('@', $email);
 if ($email_check[1] != "student.manchester.ac.uk") {
   header('Location: index.html');
 } else {
-  header('Location: ../Profile_page/profile.php');
 
-  $hashed_pass= hash('sha256',$password);
-  $hashed_id=hash('sha256',$email);
-  $_SESSION['id'] = $hashed_id;
 
-  $stmt = $mysqli->prepare("INSERT INTO Users (username, password, id, email) VALUES (?,?,?,?)");
-  $stmt->bind_param("ssss", $name, $hashed_pass, $hashed_id, $email);
+  $stmt = $mysqli->prepare("SELECT email FROM Users WHERE email==?");
+  $stmt->bind_param('s', $email);
   $stmt->execute();
+  $stmt->bind_result($find_email);
+  $stmt->fetch();
+  $stmt->close();
+  if (!is_null($find_email)) {
+    header('Location: index.html');
+  } else {
+    header('Location: ../Profile_page/profile.php');
+    $hashed_pass= hash('sha256',$password);
+    $hashed_id=hash('sha256',$email);
+    $_SESSION['id'] = $hashed_id;
+
+    $stmt = $mysqli->prepare("INSERT INTO Users (username, password, id, email) VALUES (?,?,?,?)");
+    $stmt->bind_param("ssss", $name, $hashed_pass, $hashed_id, $email);
+    $stmt->execute();
+  }
+
+
 }
 
 
