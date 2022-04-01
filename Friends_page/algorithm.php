@@ -36,7 +36,7 @@ $id_var = $_SESSION['id'];
 
 require_once('../config.inc.php');
 
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 $mysqli = new mysqli($database_host, $database_user, $database_pass, $group_dbnames[0]);
 $_SESSION['sqli'] = $mysqli;
 if($mysqli -> connect_error) {
