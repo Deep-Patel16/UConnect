@@ -29,7 +29,7 @@ if ($email_check[1] != "student.manchester.ac.uk") {
 } else {
 
 
-  $stmt = $mysqli->prepare("SELECT email FROM Users WHERE email==?");
+  $stmt = $mysqli->prepare("SELECT email FROM Users WHERE email=?");
   $stmt->bind_param('s', $email);
   $stmt->execute();
   $stmt->bind_result($find_email);
